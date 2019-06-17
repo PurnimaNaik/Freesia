@@ -1,0 +1,500 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Contact Freesia</title>
+    <script
+      type="text/javascript"
+      src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Croissant+One|Gugi|Lily+Script+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Noto+Serif+SC&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+  </head>
+  <body ng-app="validateApp">
+    <div class="header" id="myHeader">
+      <div class="headerContainer">
+        <h1><a href="index.html">Freesia</a></h1>
+
+        <div class="headerOptions">
+          <a href="index.html">Home</a>
+          <a href="index.html#productList">Products</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="mainContainer">
+      <div class="content">
+
+
+
+        <h2>Freesia Chemicals</h2>
+        <p>
+          16, Udyog Kshetra, Mulund-Goregaon Link Road, <br />Mulund West,
+          Mumbai, 400080, India
+        </p>
+        <p>Telephone No: +91-22-25689889 | +91-22-25689890 | +91-22-25652479</p>
+        <p class="email">
+          <label>Email:</label>
+
+          <a href="mailto:freesia.chemicals37@gmail.com?">
+            freesia.chemicals37@gmail.com
+          </a>
+        </p>
+
+
+
+        
+        <div ng-controller="enquiryController">
+          <form class="gForm" 
+         method="POST"
+          id="enquiryForm"
+          name="enquiryForm"
+          action="https://script.google.com/macros/s/AKfycbwO_6v87zWmrLaoDzyr4MFeaRWC6l52LY-0BV9CgQ/exec" 
+          data-email="freesia.chemicals37@gmail.com">
+
+
+              <h2 class="enquiry">Submit Enquiry</h2>
+            <div class="formContent">
+              <table>
+                <tr>
+                  <td class="title"><label>Name :</label></td>
+                  <td class="desc">
+                    <input
+                      class="formInput"
+                      type="text"
+                      name="name"
+                      ng-model="name"
+                      id="name"
+                      ng-keyup="isFormValid()"
+                      required
+                      ng-pattern="/^[A-Za-z. ]+$/"
+                    />
+                    <span
+                      style="color:red;"
+                      ng-show="enquiryForm.name.$invalid"
+                    ></span>
+                    <p ng-show="enquiryForm.name.$error.pattern" class="error">
+                      invalid name
+                    </p>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td class="title"><label>Address :</label></td>
+                  <td class="desc">
+                    <input
+                      class="formInput"
+                      type="text"
+                      name="address"
+                      ng-model="address"
+                      id="address"
+                      ng-keyup="isFormValid()"
+                      required
+                      ng-pattern="/^[A-Za-z0-9., #-]+$/"
+                    />
+                    <span
+                      style="color:red;"
+                      ng-show="enquiryForm.address.$invalid"
+                    ></span>
+                    <p
+                      ng-show="enquiryForm.address.$error.pattern"
+                      class="error"
+                    >
+                      invalid address
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="title"><label>Email :</label></td>
+                  <td class="desc">
+                    <input
+                      class="formInput"
+                      type="text"
+                      name="email"
+                      ng-model="email"
+                      id="email"
+                      ng-keyup="isFormValid()"
+                      required
+                      ng-pattern="/^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,3})$/"
+                    />
+                    <span
+                      style="color:red;"
+                      ng-show="enquiryForm.email.$invalid"
+                    ></span>
+                    <p ng-show="enquiryForm.email.$error.pattern" class="error">
+                      invalid email address
+                    </p>
+                    
+                  </td>
+                </tr>
+                <tr>
+                  <td class="title"><label>Contact No :</label></td>
+                  <td class="desc">
+                    <input
+                      class="formInput"
+                      type="text"
+                      name="contactNo"
+                      ng-model="contactNo"
+                      id="contactNo"
+                      required
+                      ng-pattern="/^[0-9-]+$/"
+                      ng-keyup="isFormValid()"
+                    />
+                    <span
+                      style="color:red;"
+                      ng-show="myForm.contactNo.$invalid"
+                    ></span>
+                    <p
+                      ng-show="enquiryForm.contactNo.$error.pattern"
+                      class="error"
+                    >
+                      invalid contact number
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="title"><label>Description :</label></td>
+                  <td class="desc">
+                    <textarea
+                      maxlength="500"
+                      class="formInput"
+                      rows="4"
+                      cols="50"
+                      id="description"
+                      name="description"
+                      required
+                      ng-keyup="isFormValid()"
+                    ></textarea>
+                    <p class="maxlengthDisclaimer">500 characters max</p>
+                  </td>
+                </tr>
+              </table>
+            </div>
+
+            <div style="display:none"  class="thankyou_message">
+                <!-- You can customize the thankyou message by editing the code below -->
+                <p class="thankYouDisclaimer">Thank you for contacting us! Your enquiry has been received.<br/> We will get back to you as soon as possible.
+                </p>
+                </div>
+
+            <div class="buttonContainers">
+              <input
+                class="button reset"
+                type="reset"
+                ng-click="clearFields()"
+              />
+              <input 
+              class="button submit" 
+              id="submitButton"
+              type="submit" 
+              value="Submit"
+               />
+            </div>
+
+
+
+            <br/><br /><br /><br /><br />
+
+
+          </form>
+        </div>
+      </div>
+
+      <div class="googleMap" id="map">
+        <!-- <div class="googleMap"> -->
+        <!-- Google Map -->
+      </div>
+    </div>
+
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBdhsIr40qQ0We2uPKYdnTVD6Wiw9vVuaE&callback=initMap">
+
+</script>
+
+    <script>
+      
+      window.onscroll = function() {
+        myFunction();
+      };
+
+      var header = document.getElementById('myHeader');
+      var sticky = header.offsetTop;
+
+      function myFunction() {
+        if (window.pageYOffset > sticky) {
+          header.classList.add('sticky');
+        } else {
+          header.classList.remove('sticky');
+        }
+      }
+      
+
+      var myApp = angular.module('validateApp', []);
+      myApp.controller('enquiryController', function($scope) {
+        console.log('scope.email:', $scope.email);
+
+        $scope.clearFields = function() {
+          // console.log("clearFieldsas");
+            $scope.name = "",
+            $scope.address = "",
+            $scope.email = "",
+            $scope.contactNo = "";
+        };
+
+   
+        
+        $scope.isFormValid = function() {
+
+          if(
+          ($scope.enquiryForm.name.$invalid==false )&&
+          ($scope.enquiryForm.address.$invalid==false)&&
+          ($scope.enquiryForm.contactNo.$invalid==false)&&
+          ($scope.enquiryForm.email.$invalid==false)
+          && $('textarea#description').val()!="" )
+          {
+            $('#submitButton').prop('disabled', false);
+            $('#submitButton').css('background-color','#4caf50');
+          
+          }
+          else{
+            $('#submitButton').prop('disabled', true);
+            $('#submitButton').css('background-color','#E8E9E9');
+          }
+  };
+      });
+
+      
+
+ function initMap() {
+  var freesiaChemicals = { lat: 19.1641031, lng: 72.93912809999999 };
+   var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 10,
+     center: freesiaChemicals,
+     disableDefaultUI: true,
+    zoomControl: true,
+  //   mapTypeControl: false,
+  // scaleControl: true,
+  // streetViewControl: false,
+  rotateControl: true,
+  // fullscreenControl: false
+   });
+   var marker = new google.maps.Marker({
+     position: freesiaChemicals,
+     map: map,
+   });
+ }
+      // {lat: 19.1641031, lng: 72.93912809999999}
+    </script>
+    <script data-cfasync="false" type="text/javascript" src="form-submission-handler.js"></script>
+  </body>
+</html>
+
+<style>
+  body {
+    background: #ffffff;
+    font-family: 'Noto Serif SC', serif;
+    margin: 0;
+  }
+  .content {
+    margin-top: 50px;
+    margin-left: 55px;
+  }
+  h2 {
+    color: #42d1d8;
+    font-family: 'Gugi', cursive;
+    font-weight: 300;
+    font-size: 25px;
+    text-decoration: none;
+  }
+  tr {
+    margin-top: 50px;
+  }
+  .formInput {
+    width: 100%;
+  }
+  table {
+    width: 100%;
+  }
+
+  .maxlengthDisclaimer {
+    font-size: 10px;
+    margin-top: -5px;
+  }
+  .enquiry {
+    margin-top: 50px;
+  }
+  .formContent {
+    padding-left: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-right: 40px;
+
+    width: 90%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  label {
+    font-weight: bold;
+  }
+  .buttonContainers {
+    margin-top: 30px;
+  }
+  .button {
+    border: none;
+    color: white;
+    /* padding: 10px 20px; */
+    width: 90px;
+    height: 40px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    outline: none;
+  }
+  .submit {
+    background-color: #4caf50;
+  }
+  .reset {
+    background-color: #d30000;
+    margin-right: 10px;
+  }
+
+  .submit:hover,
+  .reset:hover {
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+      0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  }
+  .title {
+    width: 130px;
+  }
+  .email a {
+    color: #2854b8;
+  }
+
+  input[type='text'],
+  textarea {
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    outline: none;
+    padding: 3px 0px 3px 3px;
+    margin: 5px 1px 3px 0px;
+    border: 1px solid #dddddd;
+  }
+
+  input[type='text']:focus,
+  textarea:focus {
+    box-shadow: 0 0 5px #dddddd;
+    padding: 3px 0px 3px 3px;
+    margin: 5px 1px 3px 0px;
+    border: 1px solid #dddddd;
+  }
+
+  textarea {
+    /* width:500px; */
+    height: 105px;
+    resize: none;
+  }
+  .header {
+    padding: 2px 22px;
+    background: #ffffff;
+    /* color: #2854b8; */
+    -webkit-box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.1); /* Safari 3-4, iOS 4.0.1 - 4.2, Android 2.3+ */
+    -moz-box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.1); /* Firefox 3.5 - 3.6 */
+    box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.1); /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+    z-index: 3;
+  }
+
+  .headerContainer {
+    display: flex;
+    flex-direction: row;
+    -webkit-flex: 1; /* Safari 6.1+ */
+    -ms-flex: 1; /* IE 10 */
+    flex: 1;
+    justify-content: space-between;
+    align-items: center;
+    /* flex-grow: 500; */
+  }
+  .headerOptions {
+    flex: 0 0 500px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding-right: 20px;
+  }
+  .headerOptions a {
+    color: #42d1d8;
+    font-family: 'Gugi', cursive;
+    font-weight: 300;
+    font-size: 20px;
+    text-decoration: none;
+  }
+  .headerOptions a:hover {
+    color: #2854b8;
+    /* font-size: 2px; */
+  }
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+
+  .sticky + .content {
+    padding-top: 10px;
+  }
+  h1 {
+    font-family: 'Gugi', cursive;
+    font-size: 45px;
+    font-weight: 300;
+    margin: 0;
+  }
+  h1 a {
+    text-decoration: none;
+    color: #2854b8;
+  }
+  .mainContainer {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    bottom:0px;
+  }
+  .googleMap {
+    /* display: flex; */
+    width: 50%;
+    /* height: 100%; */
+    /* position: absolute; */
+    margin-left: 60px;
+    top: 0;
+    bottom: 0;
+    background-color: #ffffff;
+    z-index: 2;
+  }
+  .error {
+    color: red;
+    font-size: 10px;
+    margin-top: -1px;
+    /* margin-bottom:-20px; */
+  }
+  .thankYouDisclaimer{
+    color: #4caf50;
+    font-size: 18px;
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 600;
+    /* margin-top: -1px; */
+  }
+</style>
+

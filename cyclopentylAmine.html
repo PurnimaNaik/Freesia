@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cyclopentyl Amine</title>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+    <script>
+      type = 'text/javascript';
+      src = 'http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js';
+    </script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Croissant+One|Gugi|Lily+Script+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Noto+Serif+SC&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="header" id="myHeader">
+      <div class="headerContainer">
+        <h1><a href="index.html">Freesia</a></h1>
+
+        <div class="headerOptions">
+          <a href="index.html">Home</a>
+          <a href="index.html#productList">Products</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="mainContainer">
+      <div class="content">
+        <div class="papers">
+            <h1>Cyclopentyl Amine</h1>
+          <h2>Identitiers</h2>
+          <table>
+            <tr>
+              <td class="title">CAS number</td>
+              <td class="desc">1003-03-8</td>
+            </tr>
+            <tr>
+                <td class="title">CN number</td>
+                <td class="desc">2921 30 99</td>
+              </tr>
+            <tr>
+              <td class="title">Appearance</td>
+              <td class="desc">Clear, colourless  or yellow liquid, amine odour, infinitely miscible</td>
+            </tr>
+          </table>
+
+          <h2>Properties</h2>
+          <table>
+            <tr>
+              <td class="title">Molecular formula</td>
+              <td class="desc">C5H11N</td>
+            </tr>
+            <tr>
+              <td class="title">Density at 20&#8451;</td>
+              <td class="desc">
+                  862 Kg/m
+              </td>
+            </tr>
+            <tr>
+              <td class="title">Boiling point</td>
+              <td class="desc">106 ~ 108&#8451;</td>
+            </tr>
+            <tr>
+              <td class="title">Flash Point</td>
+              <td class="desc">11&#8451;</td>
+            </tr>
+            <tr>
+              <td class="title">Purity</td>
+              <td class="desc">99.0% min</td>
+            </tr>
+            <tr>
+              <td class="title">Moisture</td>
+              <td class="desc">0.3% max</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div class="widgetContainer">
+        <div class="widgetStyle">
+          <iframe
+            class="pubchem-widget"
+            src="https://pubchem.ncbi.nlm.nih.gov/compound/2906#section=3D-Conformer&embed=true&hide_title=true"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+    <br/><br/><br/> <br/><br/><br/>
+    <script>
+      window.onscroll = function() {
+        myFunction();
+      };
+
+      var header = document.getElementById('myHeader');
+      var sticky = header.offsetTop;
+
+      function myFunction() {
+        if (window.pageYOffset > sticky) {
+          header.classList.add('sticky');
+        } else {
+          header.classList.remove('sticky');
+        }
+      }
+    </script>
+  </body>
+</html>
+
+<style>
+  body {
+    background: #ffffff;
+    font-family: 'Noto Serif SC', serif;
+    margin: 0;
+  }
+  table {
+    border-collapse: collapse;
+    background: #ffffff;
+    width: 100%;
+    border: 1px solid #ddd;
+    margin-bottom: 30px;
+  }
+
+  th,
+  td {
+    text-align: left;
+    padding: 8px;
+    border: 1px solid #ddd;
+  }
+  .desc {
+    padding-left: 10px;
+    width: 350px;
+  }
+  .title {
+    /* background: #EDFBFF; */
+    font-weight: bold;
+  }
+
+  /* tr:nth-child(even){
+  background-color: #EDFFF0
+  }
+  tr:nth-child(odd){
+  background-color: #EDF6FF
+  } */
+
+  .papers,
+  .papers:before,
+  .papers:after {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: inset 0 0 2px rgba(0, 0, 0, 0), 1px 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  .papers {
+    position: relative;
+    width: 50%;
+    padding: 2em;
+    margin-left: 20px;
+    width: 480px;
+    
+  }
+
+  .papers:before,
+  .papers:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-transform: rotateZ(2.5deg);
+    -o-transform: rotate(2.5deg);
+    transform: rotateZ(2.5deg);
+    z-index: -1;
+  }
+
+  .papers:after {
+    -webkit-transform: rotateZ(-2.5deg);
+    -o-transform: rotate(-2.5deg);
+    transform: rotateZ(-2.5deg);
+  }
+  h1{
+
+color: black;
+font-family: 'Gugi', cursive;
+font-weight: 300;
+font-size: 28px;
+}
+  h2 {
+    color: #42d1d8;
+    font-family: 'Gugi', cursive;
+    font-weight: 300;
+    font-size: 20px;
+  }
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+
+  .sticky + .content {
+    padding-top: 10px;
+  }
+  .header {
+    margin: 0;
+    width: 100%;
+    padding: 2px 22px;
+    background: #ffffff;
+    color: #2854b8;
+    -webkit-box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.1); /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+    -moz-box-shadow: 0px 12px 25px rgba(189, 91, 91, 0.2); /* Firefox 3.5 - 3.6 */
+    box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.1); /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+    z-index: 1
+  }
+
+  .headerContainer {
+    display: flex;
+    flex-direction: row;
+    -webkit-flex: 1; /* Safari 6.1+ */
+    -ms-flex: 1; /* IE 10 */
+    flex: 1;
+    justify-content: space-between;
+    align-items: center;
+    /* flex-grow: 500; */
+  }
+  .headerOptions {
+    flex: 0 0 500px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding-right: 50px;
+  }
+  .headerOptions a {
+    color: #42d1d8;
+    font-family: 'Gugi', cursive;
+    font-weight: 300;
+    font-size: 20px;
+    text-decoration: none;
+  }
+  .headerOptions a:hover {
+    color: #2854b8;
+    /* font-size: 2px; */
+  }
+  .headerContainer h1 {
+    font-family: 'Gugi', cursive;
+    font-size: 45px;
+    font-weight: 300;
+    margin: 0;
+  }
+  .headerContainer h1 a {
+    text-decoration: none;
+    color: #2854b8;
+  }
+  .mainContainer {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+  .content {
+    margin-top: 50px;
+    display: flex;
+    width: 100%;
+    margin-left: 30px;
+  }
+  .widgetContainer {
+    margin-top: 48px;
+    display: flex;
+    width: 100%;
+  }
+  /* .widgetStyles {
+    display: flex;
+    width: 100%;
+  } */
+  .pubchem-widget {
+    display: flex;
+    width: 500px;
+    height: 600px;
+    bottom: 0px;
+  }
+</style>

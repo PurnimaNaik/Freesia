@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>Freesia Chemicals</title>
+      <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+      <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
+      <link
+      href="https://fonts.googleapis.com/css?family=Vollkorn+SC&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Croissant+One|Gugi|Lily+Script+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Noto+Serif+SC&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <title>Page Title</title>
+  </head>
+  <body>
+    <div class="header" id="myHeader">
+      <div class="headerContainer">
+        <h1><a href="index.html">Freesia</a></h1>
+
+        <div class="headerOptions">
+          <a href="index.html">Home</a>
+          <a href="index.html#productList">Products</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="content">
+        <div class="row">
+          <div class="banner">
+            <img src="beaker.jpg" alt="beaker banner" class="responsive" />
+            <div class="floatingText">
+              India's largest supplier for Cyclopentanone and it's deravatives.
+             <div class="floatingSubtextContainer"> <p class="floatingSubtext"> Developers of custom chemical compounds 
+              for  chemical and pharma industry needs. </p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+<!-- 
+<script>
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        var myObj = JSON.parse(this.responseText);
+        document.getElementById("demo").innerHTML = myObj.name;
+      }
+    };
+    xmlhttp.open("GET", "json_demo.txt", true);
+    xmlhttp.send();
+    </script> -->
+
+      <div id="productList" class="productListContainer">
+        <h2>Product List</h2>
+
+        <div class="productListRow">
+          <div class="productCard" onclick="window.open('cyclopentanone.html', '_blank');" target="_blank" style="cursor:pointer;">
+            
+            <div class="imageContainer"><img src="cyclopentanone.jpg" alt="Norway"  class="image" /></div>
+            <div class="productTitle">
+              <h4>Cyclopentanone</h4>
+              <h5>CAS No. 120-92-3</h5>
+            </div>
+          </div>
+
+          <div class="productCard" onclick="window.open('cyclopentanol.html', '_blank');"">
+              <div class="imageContainer"><img src="cyclopentanol.jpg" alt="Norway"  class="image" /></div>
+            <div class="productTitle">
+                <h4>Cyclopentanol</h4>
+                <h5>CAS No. 96-41-3</h5>
+            </div>
+          </div>
+
+          <div class="productCard" onclick="window.open('cyclopentylBromide.html', '_blank');">
+              <div class="imageContainer"><img src="cyclopentylBromide.jpg" alt="Norway"  class="image" /></div>
+            <div class="productTitle">
+                <h4>Cyclopentyl Bromide</h4>
+                <h5>CAS No. 137-43-9</h5>
+            </div>
+          </div>
+        </div>
+
+        <div class="productListRow">
+          <div class="productCard" onclick="window.open('cyclopentylChloride.html', '_blank');">
+              <div class="imageContainer"><img src="cyclopentylChloride.jpg" alt="Norway"  class="image" /></div>
+            <div class="productTitle">
+              <h4>Cyclopentyl Chloride</h4>
+              <h5>CAS No. 930-28-9</h5>
+            </div>
+          </div>
+
+          <div class="productCard" onclick="window.open('cyclopentylAmine.html', '_blank');">
+              <div class="imageContainer"><img src="cyclopentylAmine.jpg" alt="Norway"  class="image" /></div>
+            <div class="productTitle">
+              <h4>Cyclopentyl Amine</h4>
+              <h5>CAS  No. 1003-03-8</h5>
+            </div>
+          </div>
+
+          <div class="productCard" onclick="window.open('alphaTetralone.html', '_blank');">
+              <div class="imageContainer"><img src="alphaTetralone.jpg" alt="Norway"  class="image" /></div>
+            <div class="productTitle">
+              <h4>Alpha Tetralone</h4>
+              <h5>CAS No. 529-34-0</h5>
+            </div>
+          </div>
+        </div>
+
+        <div class="productListRow">
+          <div class="productCard" onclick="window.open('1-5Dibromopentane.html', '_blank');">
+              <div class="imageContainer"><img src="1-5Dibromopentane.jpg" alt="Norway"  class="image" /></div>
+            <div class="productTitle">
+              <h4>1-5 Dibromopentane</h4>
+              <h5>CAS No. 111-24-0</h5>
+            </div>
+          </div>
+
+          <div class="productCard" onclick="window.open('Bromo5Chloropentane.html', '_blank');">
+              <div class="imageContainer"><img src="1Bromo5Chloropentane.jpg" alt="Norway"  class="image" /></div>
+            <div class="productTitle">
+              <h4>1-Bromo-5-Chloropentane</h4>
+              <h5>CAS No. 54512-75-3</h5>
+            </div>
+          </div>
+
+          <div class="productCard" onclick="window.open('4Phenyl1Butanol.html', '_blank');">
+              <div class="imageContainer"><img src="4Phynel1Butanol.jpg" alt="Norway"  class="image" /></div>
+            <div class="productTitle">
+              <h4>4-Phnyel-1-Butanol</h4>
+              <h5>CAS No. 3360-41-6</h5>
+            </div>
+          </div>
+        </div>
+
+        <div class="productListRow">
+          <div class="productCard" onclick="window.open('Methyl-4-phenyl-butyrate.html', '_blank');">
+              <div class="imageContainer"><img src="Methyl-4-phenyl-butyrate.jpg" alt="Norway"  class="image" /></div>
+            <div class="productTitle">
+              <h4>Methyl-4-Phenyl-1 Butyrate</h4>
+              <h5>CAS No. 2046-17-5</h5>
+            </div>
+          </div>
+
+          <div class="productCard" onclick="window.open('diethylKetone.html', '_blank');">
+              <div class="imageContainer"><img src="diethylKetone.jpg" alt="Norway"  class="image" /></div>
+            <div class="productTitle">
+              <h4>Diethyl Ketone</h4>
+              <h5>CAS No. 96-22-0</h5>
+            </div>
+          </div>
+
+        </div>
+
+
+        <div class="disclaimerContainer">
+            <div class="disclaimer">Posted by: Purnima Naik    |    © 2019 All rights reserved</div>
+        </div>
+        
+      </div>
+
+      
+    </div>
+
+    <script>
+        // Feel free to change or delete any of the code you see in this editor!
+        var svg = d3.select("p").append("svg")
+          .attr("width", 960)
+          .attr("height", 500)
+        d3.json("Conformer3D_CID_8452.json", function(error, data){
+          data = data['PC_Compounds'][0]
+          
+          var current = {x: [1,2,3,4],
+                         y: [5,10,15,20]}
+          
+          var goal = [{x:1, y:5},
+                      {x:2, y:10},
+                      {x:3, y:15},
+                      {x:4, y:20},
+                     ]
+    //      https://stackoverflow.com/questions/42342552/best-way-to-convert-object-with-arrays-to-array-with-objects-and-viceversa
+          
+          function getArray(object) {
+              return Object.keys(object).reduce(function (r, k) {
+                  object[k].forEach(function (a, i) {
+                      r[i] = r[i] || {};
+                      r[i][k] = a;
+                  });
+                  return r;
+              }, []);
+          }
+          
+     
+          
+          atoms = {atom_id: data.atoms.aid,
+                      element_id: data.atoms.element,
+                      x: data.coords[0].conformers[0].x,
+                      y: data.coords[0].conformers[0].y
+                     }
+          
+          var bonds = {source: data.bonds.aid1,
+                       target: data.bonds.aid2,
+                       bond_order: data.bonds.order
+                     }
+          atoms = getArray(atoms);
+          bonds = getArray(bonds);
+                console.log(data)
+    //       console.log(Object.keys(new_data))
+                color = d3.scaleOrdinal(d3.schemeSet2);
+          
+        color.domain(atoms.map(function(d) { return d.element_id;}))
+        
+                   
+          data = data.coords[0].conformers[0].x
+          console.log(bonds)
+          svg.selectAll('.atom')
+          .data(atoms)
+          .enter().append("text")
+          .text(function(d, i) {return i +1;})
+          .style('fill', function(d) { return color(d.element_id);})
+          .attr("x", function(d) {return d.x*70})
+          .attr("y", function(d) {return d.y*70 + 200})
+          .attr("font-size", 26)
+          .attr("font-family", "monospace")
+          
+        svg.selectAll('circle')
+          .data(atoms)
+          .enter().append("circle")
+          .style('fill', function(d) { return color(d.element_id);})
+          .attr("cx", function(d) {return d.x*70})
+          .attr("cy", function(d) {return d.y*70 + 200})
+          .attr("r", 2)
+        
+        svg.selectAll('line')
+          .data(bonds)
+          .enter().append("line")
+          .style('fill', function(d) { return color(d.element_id);})
+          .attr("x1", function(d) {return d.source*70})
+          .attr("x2", function(d) {return d.target*70})
+          .attr("y1", function(d) {return d.source*70})
+          .attr("y2", function(d) {return d.target*70})
+          .attr("stroke", "blue")
+          .attr("stroke-width", 2)
+          .attr("fill", "none");
+     
+        })
+      </script>
+
+    <!-- Load React. -->
+    <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+    <script
+      src="https://unpkg.com/react@16/umd/react.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+
+    <!-- Load our React component. -->
+    <script src="like_button.js"></script>
+
+    <script>
+      window.onscroll = function() {
+        myFunction();
+      };
+
+      var header = document.getElementById('myHeader');
+      var sticky = header.offsetTop;
+
+      function myFunction() {
+        if (window.pageYOffset > sticky) {
+          header.classList.add('sticky');
+        } else {
+          header.classList.remove('sticky');
+        }
+      }
+
+//       window.addEventListener("hashchange", function () {
+//     window.scrollTo(window.scrollX, window.scrollY + 1500);
+// });
+
+    </script>
+
+
+    <style>
+      body {
+        margin: 0;
+        font-family: 'Noto Serif SC', serif;
+        color: #42d1d8;
+        background-color: #F4FFFF;
+      }
+      h1 {
+        /* font-family: 'Vollkorn SC', serif; */
+        font-family: 'Gugi', cursive;
+        /* font-family: 'Lily Script One', cursive; */
+        /* font-family: 'Croissant One', cursive; */
+
+        font-size: 45px;
+        font-weight: 300;
+        margin: 0;
+      }
+      h1 a{
+        text-decoration: none;
+        color: #2854b8;
+      }
+      h3 {
+        color: #42d1d8;
+        font-family: 'Gugi', cursive;
+        font-weight: 300;
+      }
+      h4{
+        margin-top:6px;
+        margin-bottom:5px;
+      }
+      h5{
+        margin-top:0px;
+        margin-bottom:10px;
+      }
+      .responsive {
+        margin: 0;
+        width: 100%;
+        height: auto;
+      }
+
+      .content {
+        /* padding: 16px; */
+      }
+      .sticky {
+        position: fixed;
+        top: 0;
+        width: 100%;
+      }
+
+      .sticky + .content {
+        padding-top: 10px;
+      }
+      .header {
+        
+        padding: 2px 22px;
+        background: #ffffff;
+        color: #2854b8;
+        -webkit-box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.1); /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+        -moz-box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.1); /* Firefox 3.5 - 3.6 */
+        box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.1); /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+        z-index: 10;
+      }
+
+      .headerContainer {
+        display: flex;
+        flex-direction: row;
+        -webkit-flex: 1; /* Safari 6.1+ */
+        -ms-flex: 1; /* IE 10 */
+        flex: 1;
+        justify-content: space-between;
+        align-items: center;
+        /* flex-grow: 500; */
+      }
+      .headerOptions {
+        flex: 0 0 500px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        padding-right: 20px;
+      }
+      .headerOptions a {
+        color: #42d1d8;
+        font-family: 'Gugi', cursive;
+        font-weight: 300;
+        font-size: 20px;
+        text-decoration: none;
+      }
+      .headerOptions a:hover {
+        color: #2854b8;
+        /* font-size: 2px; */
+      }
+      .floatingText {
+        position: absolute;
+        top: 100px;
+        right: 65px;
+        font-family: 'Noto Serif SC', serif;
+        font-weight: 300;
+        font-size: 35px;
+        color: #ffffff;
+        margin-left: 500px;
+        margin-top: 30px;
+        word-wrap: break-word;
+        text-align: right;
+        width:650px;
+        /* z-index: 0; */
+      }
+      .floatingSubtext{
+        font-size: 20px;
+      }
+      .floatingSubtextContainer{
+        /* width:800px; */
+        
+      }
+      #productList{
+        padding-top: 107px;
+      }
+      .productListContainer {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        justify-content: space-around;
+      }
+      .productListContainer h2 {
+        margin-bottom: 30px;
+        color: #42d1d8;
+        font-family: 'Gugi', cursive;
+        font-weight: 300;
+        font-size: 35px;
+      }
+      .productCard{
+        background-color: #42d1d8;
+        /* background-color: #2854b8; */
+        /* background-color: #000080; */
+        color:white;
+      }
+      .productListRow {
+        width: 100%;
+        margin-bottom: 60px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+      }
+      div.productCard {
+        width: 350px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1),
+          0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        text-align: center;
+      }
+
+      div.productTitle {
+        padding: 10px;
+      }
+      .disclaimer{
+        text-align: center;
+        color:black;
+        font-size: 12px;
+        /* font-weight: 300; */
+        padding-bottom: 5px;
+      }
+      .disclaimerContainer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .image{
+        width:200px;
+        height:200px;
+      }
+      .imageContainer{
+        width:100%;
+        background-color: white;
+      }
+
+    </style>
+  </body>
+</html>

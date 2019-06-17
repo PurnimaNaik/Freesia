@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cyclopentanone</title>
+    <script
+      type="text/javascript"
+      src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Croissant+One|Gugi|Lily+Script+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Noto+Serif+SC&display=swap"
+      rel="stylesheet"
+    />
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <title>Page Title</title>
+  </head>
+  <body>
+    <div class="header" id="myHeader">
+      <div class="headerContainer">
+        <h1><a href="index.html">Freesia</a></h1>
+
+        <div class="headerOptions">
+          <a href="index.html">Home</a>
+          <a href="index.html#productList">Products</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="mainContainer">
+    <div class="content">
+    <h2>About</h2>
+    <p>
+    Freesia Chemicals ESTD. 2002, specializes in developing custom chemical compounds 
+     catering to the ever-growing chemical and pharma industry needs. 
+  
+      Freesia boasts veteren founders with over 4 decades of collective experience, massive infrastructure, 
+      timely diversification and a team of dedicated professionals committed to delivering quality product,
+      service and customer experience.
+    
+      <br><br>
+      All these strengths put together, enable us to become India's largest suppliers of Cyclopentanone and its derivatives; 
+      delivering a whooping <span>600 Metric Ton(6,000,000 kilograms) product per annum</span>.
+    
+    </p>
+
+    <h2>Reaction Capabilities</h2>
+    <p>
+        <!-- Engineers at Freesia specialize in the following development processes- <br> -->
+        &#9879&nbspChlorination  <br>
+        &#9879&nbspCondensation  <br>
+        &#9879&nbspCyclization  <br>
+        &#9879&nbspBromination  <br>
+        &#9879&nbspFriedel-Craft  <br>
+        &#9879&nbspGrignard <br>
+      </p>
+
+      <h2>Manufacturing Plant</h2>
+      <p>
+      Located in Ambernath MIDC., near Mumbai city (the commercial capital of India), Freesia's 
+      plant is a <span>ISO 9001:2015 certified</span> establishment where production, 
+      R&D, quality control and quality assurance   takes place.
+    </p>
+    <p>
+          <h4>Stocked with:</h4>
+          &#9879&nbspProduction block holding 24 reactors with min. 0.5 KL & max. 5 KL capacity.<br>
+          &#9879&nbspGlass lined reactors with 0.25KL,1KL,3KL & 5KL capacities.<br>
+          &#9879&nbspDistillation columns (300MM in diameter and 5M in height).<br>
+          &#9879&nbspProcess development lab.  <br>
+          &#9879&nbspWarehouse for raw material storage.<br>
+          &#9879&nbspFire hydrant system, fire extinguishers & alarms, smoke alarms, etc.<br>
+          &#9879&nbspEffluent treatment facility (Primary Treatment).<br>
+        </p>
+        <p>
+            <h4>Other utility equipments include:</h4>
+            &#9879&nbspBoilers (600 kg capacity).		 <br>      	
+            &#9879&nbspThemopack (4000 kcal).			  <br>          
+            &#9879&nbspHigh vacuum set up with water jet.	<br>		
+            &#9879&nbspHigh vacuum set up with steam jet.	 <br> 	
+            &#9879&nbspCooling Tower (350 TR capacity).<br>			
+            &#9879&nbspCooling Tower (250 TR capacity).	<br>	  	
+            &#9879&nbspChilling Plant (70 TR capacity.) <br> 	
+            &#9879&nbspChilling Plant (44 TR  capacity).	<br>
+            &#9879&nbspMulti stage scrubbing system.	<br>	    	
+        </p>
+
+        <p>
+      Continual innovations transpire in the Process Development lab where new products are developed 
+      and scaled up, to study the chemical
+      kinetics and relative parameters for practical commercialization in the plant. 
+      <br><br>
+
+    
+      Quality checks are administered at every node of the manufacturing line by conducting self-audits, 
+      internal facility audits, and QA compliance audits.
+      <br><br>
+    
+      Being a member of the Common Effluent Treatment Plant, Freesia has contributed and proposed 
+      significant investments in controlling waste pollution.
+      Freesia integrates a biological plant for treating
+      wastewater and recycling it for gardening purposes ensuring minimum waste pollution.
+    </p>
+
+    <div>
+<h4>Founders:</h4>
+Mr. Ashok Naik<br>
+Mr. Ulhas Naik<br>
+Mr. Arun Naik <br>
+
+    </div>
+    <br>
+    If interested in buying our products or want to know more, 
+    please go to our contact page (<a href="contact.html">here</a>) to get in contact with us.
+
+    <br><br><br>
+    <br><br>
+  </div>
+
+  <div class="canvasContainer">
+<canvas></canvas>
+  </div>
+
+</div>
+
+
+
+
+
+    <script>
+      window.onscroll = function() {
+        myFunction();
+      };
+
+      var header = document.getElementById('myHeader');
+      var sticky = header.offsetTop;
+
+      function myFunction() {
+        if (window.pageYOffset > sticky) {
+          header.classList.add('sticky');
+        } else {
+          header.classList.remove('sticky');
+        }
+      }
+
+      (function() {
+
+var canvas, ctx, circ, nodes, mouse, SENSITIVITY, SIBLINGS_LIMIT, DENSITY, NODES_QTY, ANCHOR_LENGTH, MOUSE_RADIUS;
+
+// how close next node must be to activate connection (in px)
+// shorter distance == better connection (line width)
+SENSITIVITY = 100;
+// note that siblings limit is not 'accurate' as the node can actually have more connections than this value that's because the node accepts sibling nodes with no regard to their current connections this is acceptable because potential fix would not result in significant visual difference 
+// more siblings == bigger node
+SIBLINGS_LIMIT = 10;//10
+// default node margin
+DENSITY = 50;//50
+// total number of nodes used (incremented after creation)
+NODES_QTY = 0;
+// avoid nodes spreading
+ANCHOR_LENGTH = 20;
+// highlight radius
+MOUSE_RADIUS = 200;//200
+
+circ = 2 * Math.PI;
+nodes = [];
+
+canvas = document.querySelector('canvas');
+resizeWindow();
+mouse = {
+  x: canvas.width /2,
+  y: canvas.height / 2
+};
+ctx = canvas.getContext('2d');
+if (!ctx) {
+  alert("Ooops! Your browser does not support canvas :'(");
+}
+
+function Node(x, y) {
+  this.anchorX = x;
+  this.anchorY = y;
+  this.x = Math.random() * (x - (x - ANCHOR_LENGTH)) + (x - ANCHOR_LENGTH);
+  this.y = Math.random() * (y - (y - ANCHOR_LENGTH)) + (y - ANCHOR_LENGTH);
+  this.vx = Math.random() * 2 - 1;
+  this.vy = Math.random() * 2 - 1;
+  this.energy = Math.random();
+  this.radius = Math.random();
+  this.siblings = [];
+  this.brightness = 0;
+}
+
+Node.prototype.drawNode = function() {
+  var color = "rgba(40, 84, 184, " + this.brightness + ")";
+  ctx.beginPath();
+  ctx.arc(this.x, this.y, 2 * this.radius + 2 * this.siblings.length / SIBLINGS_LIMIT, 0, circ);
+  ctx.fillStyle = color;
+  ctx.fill();
+};
+
+Node.prototype.drawConnections = function() {
+  for (var i = 0; i < this.siblings.length; i++) {
+    var color = "rgba(66, 209, 216, " + this.brightness + ")";
+    ctx.beginPath();
+    ctx.moveTo(this.x, this.y);
+    ctx.lineTo(this.siblings[i].x, this.siblings[i].y);
+    ctx.lineWidth = 1 - calcDistance(this, this.siblings[i]) / SENSITIVITY;
+    ctx.strokeStyle = color;
+    ctx.stroke();
+  }
+};
+
+Node.prototype.moveNode = function() {
+  this.energy -= 0.001;
+  if (this.energy < 1) {
+    this.energy = Math.random() * 100;
+    if (this.x - this.anchorX < -ANCHOR_LENGTH) {
+      this.vx = Math.random() * 2;
+    } else if (this.x - this.anchorX > ANCHOR_LENGTH) {
+      this.vx = Math.random() * -2;
+    } else {
+      this.vx = Math.random() * 4 - 2;
+    }
+    if (this.y - this.anchorY < -ANCHOR_LENGTH) {
+      this.vy = Math.random() * 2;
+    } else if (this.y - this.anchorY > ANCHOR_LENGTH) {
+      this.vy = Math.random() * -2;
+    } else {
+      this.vy = Math.random() * 4 - 2;
+    }
+  }
+  this.x += this.vx * this.energy / 100;
+  this.y += this.vy * this.energy / 100;
+};
+
+function initNodes() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  // ctx.clearRect(0, 0, canvas.width, canvas.height);
+  nodes = [];
+  for (var i = DENSITY; i < canvas.width; i += DENSITY) {
+    for (var j = DENSITY; j < canvas.height; j += DENSITY) {
+      nodes.push(new Node(i, j));
+      NODES_QTY++;
+    }
+  }
+}
+
+function calcDistance(node1, node2) {
+  return Math.sqrt(Math.pow(node1.x - node2.x, 2) + (Math.pow(node1.y - node2.y, 2)));
+}
+
+function findSiblings() {
+  var node1, node2, distance;
+  for (var i = 0; i < NODES_QTY; i++) {
+    node1 = nodes[i];
+    node1.siblings = [];
+    for (var j = 0; j < NODES_QTY; j++) {
+      node2 = nodes[j];
+      if (node1 !== node2) {
+        distance = calcDistance(node1, node2);
+        if (distance < SENSITIVITY) {
+          if (node1.siblings.length < SIBLINGS_LIMIT) {
+            node1.siblings.push(node2);
+          } else {
+            var node_sibling_distance = 0;
+            var max_distance = 0;
+            var s;
+            for (var k = 0; k < SIBLINGS_LIMIT; k++) {
+              node_sibling_distance = calcDistance(node1, node1.siblings[k]);
+              if (node_sibling_distance > max_distance) {
+                max_distance = node_sibling_distance;
+                s = k;
+              }
+            }
+            if (distance < max_distance) {
+              node1.siblings.splice(s, 1);
+              node1.siblings.push(node2);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+function redrawScene() {
+  resizeWindow();
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  findSiblings();
+  var i, node, distance;
+  for (i = 0; i < NODES_QTY; i++) {
+    node = nodes[i];
+    distance = calcDistance({
+      x: mouse.x/5,
+      y: mouse.y
+    }, node);
+    if (distance < MOUSE_RADIUS) {
+      node.brightness = 1 - distance / MOUSE_RADIUS;
+    } else {
+      node.brightness = 0;
+    }
+  }
+  for (i = 0; i < NODES_QTY; i++) {
+    node = nodes[i];
+    if (node.brightness) {
+      node.drawNode();
+      node.drawConnections();
+    }
+    node.moveNode();
+  }
+  requestAnimationFrame(redrawScene);
+}
+
+function initHandlers() {
+  document.addEventListener('resize', resizeWindow, false);
+  canvas.addEventListener('mousemove', mousemoveHandler, false);
+}
+
+function resizeWindow() {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+}
+
+function mousemoveHandler(e) {
+  mouse.x = e.clientX;
+  mouse.y = e.clientY;
+}
+
+initHandlers();
+initNodes();
+redrawScene();
+
+})();
+
+    </script>
+  </body>
+</html>
+
+<style>
+  body {
+    margin: 0px;
+    font-family: 'Noto Serif SC', serif;
+    /* overflow: hidden; */
+  }
+  span{
+    font-weight:bolder;
+    text-decoration: underline;
+    text-decoration-color: #42d1d8;
+    font-size: 18px;
+  }
+  .canvasContainer{
+  width: 600px;
+  bottom:0px;
+  overflow: hidden;
+  }
+  .content{
+    margin-left:45px;
+    width:70%;
+  }
+  .mainContainer{
+    display:flex;
+    flex-direction: row;
+    width:100%
+  }
+  canvas {
+  /* position: relative; */
+    position: fixed;
+  /* top: 0;
+  bottom: 0; */
+  /* width: 100%;
+  height: 100%; */
+  /* background-color: #ffffff; */
+  overflow: hidden;
+  z-index: 1;
+}
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+
+  .sticky + .content {
+    padding-top: 10px;
+  }
+  .header {
+    margin: 0;
+    width: 100%;
+    padding: 2px 22px;
+    background: #ffffff;
+    color: #2854b8;
+    -webkit-box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.1); /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+    -moz-box-shadow: 0px 12px 25px rgba(189, 91, 91, 0.2); /* Firefox 3.5 - 3.6 */
+    box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.1); /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+    z-index: 2;
+  }
+
+  .headerContainer {
+    display: flex;
+    flex-direction: row;
+    -webkit-flex: 1; /* Safari 6.1+ */
+    -ms-flex: 1; /* IE 10 */
+    flex: 1;
+    justify-content: space-between;
+    align-items: center;
+    /* flex-grow: 500; */
+  }
+  .headerOptions {
+    flex: 0 0 500px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding-right: 50px;
+  }
+  .headerOptions a {
+    color: #42d1d8;
+    font-family: 'Gugi', cursive;
+    font-weight: 300;
+    font-size: 20px;
+    text-decoration: none;
+  }
+  .headerOptions a:hover {
+    color: #2854b8;
+    /* font-size: 2px; */
+  }
+  h1 {
+    font-family: 'Gugi', cursive;
+    font-size: 45px;
+    font-weight: 300;
+    margin: 0;
+  }
+  h1 a {
+    text-decoration: none;
+    color: #2854b8;
+  }
+
+  h4{
+    margin-bottom:5px;
+  }
+  h2 {
+        /* margin-bottom: 30px; */
+        color: #42d1d8;
+        font-family: 'Gugi', cursive;
+        font-weight: 300;
+        font-size: 27px;
+      }
+      .content a {
+    /* text-decoration: none; */
+    color: #2854b8;
+  }
+</style>
+
+<!-- Stocked with Stainless Steel and glass lined reactors, High Vacuum Distillation Columns, Chilling plants 
+and many other auxiliary equipments that help create a high quality product.
+
+Freesia's proposal involves a biological plant for treating
+wastewater and recycling it for gardening purposes. -->
