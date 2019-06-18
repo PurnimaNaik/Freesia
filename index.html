@@ -2,7 +2,7 @@
 <html>
   <head>
       <title>Freesia Chemicals</title>
-      
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
       <link
       href="https://fonts.googleapis.com/css?family=Vollkorn+SC&display=swap"
@@ -22,6 +22,11 @@
   <body>
     <div class="header" id="myHeader">
       <div class="headerContainer">
+
+          <div id="mobileHeader">
+              <h1><a href="index.html#productList">mobile</a></h1>
+          </div>
+
         <h1><a href="index.html">Freesia</a></h1>
 
         <div class="headerOptions">
@@ -30,6 +35,10 @@
           <a href="./screens/about.html">About</a>
           <a href="./screens/contact.html">Contact</a>
         </div>
+
+
+
+
       </div>
     </div>
 
@@ -191,7 +200,9 @@
         }
       }
     </script>
-
+    <div class="blueLine"></div>
+  </body>
+</html>
 
     <style>
       body {
@@ -275,7 +286,6 @@
       }
       .headerOptions a:hover {
         color: #2854b8;
-        /* font-size: 2px; */
       }
       .floatingText {
         position: absolute;
@@ -361,6 +371,96 @@
         background-color: white;
       }
 
+      @media screen and (max-width: 800px) {
+        body {
+        margin: 0;
+        font-family: 'Noto Serif SC', serif;
+        color: #42d1d8;
+        background-color: #F4FFFF;
+      }
+      /* #mobileHeader { display: block; } */
+      .headerOptions { display: none; }
+
+      .productListRow {
+        width: 100%;
+        margin-bottom: 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* justify-content: space-around; */
+      }
+      .disclaimerContainer{
+        margin-top: 40px;
+        margin-top: 30px;
+      }
+      .disclaimer{
+        text-align: center;
+        color:black;
+        font-size: 8px;
+        /* font-weight: 300; */
+        padding-bottom: 5px;
+      }
+      .responsive {
+        margin: 0;
+        width: 230%;
+        height: auto;
+        /* width: 100%; */
+        /* max-width: 900px; */
+        /* max-height: 800px; */
+        overflow:hidden;
+      }
+      #productList{
+        padding-top: 0px;
+      }
+
+      .floatingText {
+        position: absolute;
+        top: 50px;
+        /* right: 10px; */
+        left:10px;
+        font-family: 'Noto Serif SC', serif;
+        font-weight: 300;
+        font-size: 8vw;
+        color: #ffffff;
+        margin-left: 0px;
+        /* margin-top: 30px; */
+        word-wrap: break-word;
+        text-align: left;
+        width:100%;
+        /* z-index: 0; */
+      }
+      .floatingSubtext{
+        font-size: 5vw;
+      }
+
+      .productListContainer h2 {
+        margin-bottom: 30px;
+        color: #42d1d8;
+        font-family: 'Gugi', cursive;
+        font-weight: 300;
+        font-size: 7vw;
+      }
+      .blueLine{
+display:block;
+width:100%;
+height:2px;
+background-color: #42d1d8;
+}
+
+}
+
+@media screen and (min-width: 800px) {
+        body {
+        margin: 0;
+        font-family: 'Noto Serif SC', serif;
+        color: #42d1d8;
+        /* background-color: green; */
+      }
+      #mobileHeader { display: none; }
+      .blueLine{
+display:none;
+}
+}
+
     </style>
-  </body>
-</html>
+
