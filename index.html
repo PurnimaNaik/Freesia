@@ -46,7 +46,10 @@
       <div class="content">
         <div class="row">
           <div class="banner">
-            <img src="./images/banner.jpg" alt="beaker banner" class="responsive" />
+            <div class="bannerContainer">
+                <img src="./images/banner.jpg" alt="beaker banner" class="responsive" />
+            </div>
+            
             <div class="floatingText">
               India's largest supplier for Cyclopentanone and it's deravatives.
              <div class="floatingSubtextContainer"> <p class="floatingSubtext"> Developers of custom chemical compounds 
@@ -372,11 +375,9 @@
       }
 
       @media screen and (max-width: 800px) {
-        body {
-        margin: 0;
-        font-family: 'Noto Serif SC', serif;
-        color: #42d1d8;
-        background-color: #F4FFFF;
+        html body {
+
+width:105vw;
       }
       /* #mobileHeader { display: block; } */
       .headerOptions { display: none; }
@@ -401,13 +402,15 @@
         padding-bottom: 5px;
       }
       .responsive {
+        width: 220%; 
         margin: 0;
-        width: 230%;
         height: auto;
-        /* width: 100%; */
-        /* max-width: 900px; */
-        /* max-height: 800px; */
-        overflow:hidden;
+
+      }
+      .bannerContainer{
+        width:100%;
+        overflow: hidden;
+
       }
       #productList{
         padding-top: 0px;

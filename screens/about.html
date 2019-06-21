@@ -20,6 +20,9 @@
   <body>
     <div class="header" id="myHeader">
       <div class="headerContainer">
+
+          <span class="hamburgerMenu" onclick="openNav()">&#9776;</span>
+
         <h1><a href="../index.html">Freesia</a></h1>
 
         <div class="headerOptions">
@@ -30,6 +33,21 @@
         </div>
       </div>
     </div>
+
+
+    <div id="mySidenav" class="sidenav">
+        <div class="sidenavHeader">
+          <Label>Menu</Label>
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          </div>
+        
+        <a href="../index.html">Home</a>
+        <a href="../index.html#productList">Products</a>
+        <a href="../screens/about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+
 
     <div class="mainContainer">
     <div class="content">
@@ -138,6 +156,16 @@ Mr. Arun Naik <br>
           header.classList.remove('sticky');
         }
       }
+
+
+      function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+
 
       (function() {
 
@@ -332,6 +360,16 @@ redrawScene();
 </html>
 
 <style>
+
+    .hamburgerMenu{
+    display:none;
+
+  }
+
+
+
+
+
   body {
     margin: 0px;
     font-family: 'Noto Serif SC', serif;
@@ -355,7 +393,8 @@ redrawScene();
   .mainContainer{
     display:flex;
     flex-direction: row;
-    width:100%
+    width:100%;
+   
   }
   canvas {
   /* position: relative; */
@@ -366,7 +405,7 @@ redrawScene();
   height: 100%; */
   /* background-color: #ffffff; */
   overflow: hidden;
-  z-index: 1;
+  z-index: 2;
 }
   .sticky {
     position: fixed;
@@ -386,7 +425,7 @@ redrawScene();
     -webkit-box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.1); /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
     -moz-box-shadow: 0px 12px 25px rgba(189, 91, 91, 0.2); /* Firefox 3.5 - 3.6 */
     box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.1); /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
-    z-index: 2;
+    z-index: 3;
   }
 
   .headerContainer {
@@ -444,6 +483,11 @@ redrawScene();
     color: #2854b8;
   }
   @media screen and (max-width: 800px) {
+
+    h1 {
+    margin-right: 600px;
+  }
+
 .canvasContainer{
   display:none;
 }
@@ -467,8 +511,81 @@ background-color: #42d1d8;
 .mainContainer{
     display:flex;
     flex-direction: column;
-    width:100%
+    width:100%;
   }
+  .hamburgerMenu{
+    display:block;
+    font-size:30px;
+    cursor:pointer;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    margin-right: 5px;
+    text-decoration: none;
+  }
+  #mySidenav {
+  
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  background-color: white;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  -webkit-box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.1); /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+    -moz-box-shadow: 0px 12px 25px rgba(189, 91, 91, 0.2); /* Firefox 3.5 - 3.6 */
+    box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.5); /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+    font-family: 'Gugi', cursive;
+}
+
+.sidenavHeader{
+/* display: flex;
+flex-direction: row;
+width:100%; */
+margin-bottom: 15px;
+}
+
+.sidenavHeader Label{
+  position: absolute;
+  top:0;
+  margin-top: 25px;
+  padding-bottom: 25px;
+  margin-left: 30px;
+  font-size: 29px;
+  /* margin-left: 100px; */
+}
+#mySidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 22px;
+  color: #2854b8;
+  display: block;
+  transition: 0.3s;
+  font-family: 'Gugi', cursive;
+}
+
+/* .sidenav a:focus{
+ background-color: none !important;
+} */
+
+#mySidenav .closebtn {
+  position: absolute;
+  top: 0px;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 100px;
+  color: black;
+}
+#mySidenav .closebtn {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
   }
   @media screen and (min-width: 800px) {
     .blueLine{
