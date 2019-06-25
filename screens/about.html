@@ -24,7 +24,7 @@
           <span class="hamburgerMenu" onclick="openNav()">&#9776;</span>
 
         <h1><a href="../index.html">Freesia</a></h1>
-
+        
         <div class="headerOptions">
           <a href="../index.html">Home</a>
           <a href="../index.html#productList">Products</a>
@@ -38,13 +38,15 @@
     <div id="mySidenav" class="sidenav">
         <div class="sidenavHeader">
           <Label>Menu</Label>
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div><button href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</button></div>
+            <div class="greyLine"></div>
           </div>
-        
+         
         <a href="../index.html">Home</a>
         <a href="../index.html#productList">Products</a>
         <a href="../screens/about.html">About</a>
         <a href="contact.html">Contact</a>
+
       </div>
 
 
@@ -366,10 +368,6 @@ redrawScene();
 
   }
 
-
-
-
-
   body {
     margin: 0px;
     font-family: 'Noto Serif SC', serif;
@@ -482,6 +480,19 @@ redrawScene();
     /* text-decoration: none; */
     color: #2854b8;
   }
+.sidenavHeader Label{
+display:none;
+}
+#mySidenav a {
+  display:none;
+}
+
+#mySidenav .closebtn {
+  display:none;
+}
+
+
+  /* #@#@#@#@##@#@#@#@##@#@#@#@##@#@#@#@##@#@#@#@##@#@#@#@##@#@#@#@##@#@#@#@# */
   @media screen and (max-width: 800px) {
 
     h1 {
@@ -507,6 +518,13 @@ display:block;
 width:100%;
 height:2px;
 background-color: #42d1d8;
+/* 42d1d8 */
+}
+.greyLine{
+display:block;
+width:100%;
+height:1px;
+background-color: lightgray;
 }
 .mainContainer{
     display:flex;
@@ -516,7 +534,6 @@ background-color: #42d1d8;
   .hamburgerMenu{
     display:block;
     font-size:30px;
-    cursor:pointer;
     margin-left: 20px;
     margin-bottom: 10px;
     margin-right: 5px;
@@ -548,12 +565,14 @@ margin-bottom: 15px;
 }
 
 .sidenavHeader Label{
+  display:block;
   position: absolute;
   top:0;
-  margin-top: 25px;
+  margin-top: 15px;
   padding-bottom: 25px;
   margin-left: 30px;
   font-size: 29px;
+  color: #42d1d8;
   /* margin-left: 100px; */
 }
 #mySidenav a {
@@ -564,35 +583,31 @@ margin-bottom: 15px;
   display: block;
   transition: 0.3s;
   font-family: 'Gugi', cursive;
+  background-color: white;
 }
 
-/* .sidenav a:focus{
- background-color: none !important;
-} */
 
 #mySidenav .closebtn {
+  display:block;
   position: absolute;
   top: 0px;
   right: 25px;
-  font-size: 36px;
+  font-size: 45px;
+  font-weight: 100;
   margin-left: 100px;
   color: black;
-}
-#mySidenav .closebtn {
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+  cursor: none;
+  padding-top: 0px;
+  padding-bottom: 0px;
 }
   }
   @media screen and (min-width: 800px) {
-    .blueLine{
+.blueLine{
 display:none;
 /* width:100%;
 border: 2px;
 border-color: #42d1d8 */
 }
+
   }
 </style>
