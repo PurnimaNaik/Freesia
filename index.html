@@ -23,10 +23,11 @@
     <div class="header" id="myHeader">
       <div class="headerContainer">
 
-          <div id="mobileHeader">
+          <!-- <div id="mobileHeader">
               <h1><a href="index.html#productList">mobile</a></h1>
-          </div>
+          </div> -->
 
+          <span class="hamburgerMenu" onclick="openNav()">&#9776;</span>
         <h1><a href="index.html">Freesia</a></h1>
 
         <div class="headerOptions">
@@ -35,12 +36,23 @@
           <a href="./screens/about.html">About</a>
           <a href="./screens/contact.html">Contact</a>
         </div>
-
-
-
-
       </div>
     </div>
+
+    <div id="mySidenav" class="sidenav">
+        <div class="sidenavHeader">
+          <Label>Menu</Label>
+            <div><button href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</button></div>
+            <div class="greyLine"></div>
+          </div>
+         
+        <a href="index.html">Home</a>
+        <a href="index.html#productList">Products</a>
+        <a href="./screens/about.html">About</a>
+        <a href="./screens/contact.html">Contact</a>
+
+      </div>
+
 
     <div class="container">
       <div class="content">
@@ -202,12 +214,33 @@
           header.classList.remove('sticky');
         }
       }
+
+      function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
     </script>
     <div class="blueLine"></div>
   </body>
 </html>
 
     <style>
+          .hamburgerMenu{
+    display:none;
+  }
+  .sidenavHeader Label{
+display:none;
+}
+#mySidenav a {
+  display:none;
+}
+
+#mySidenav .closebtn {
+  display:none;
+}
       body {
         margin: 0;
         font-family: 'Noto Serif SC', serif;
@@ -374,14 +407,33 @@
         background-color: white;
       }
 
+  /* #@#@#@#@##@#@#@#@##@#@#@#@##@#@#@#@##@#@#@#@##@#@#@#@##@#@#@#@##@#@#@#@# */
       @media screen and (max-width: 800px) {
-        html body {
 
-width:105vw;
+        #productList{
+        padding-top: 10px;
       }
-      /* #mobileHeader { display: block; } */
-      .headerOptions { display: none; }
-
+      .productListContainer {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        justify-content: space-around;
+      }
+      .productListContainer h2 {
+        margin-bottom: 30px;
+        color: #42d1d8;
+        font-family: 'Gugi', cursive;
+        font-weight: 300;
+        font-size: 35px;
+      }
+      .productCard{
+        background-color: #42d1d8;
+        /* background-color: #2854b8; */
+        /* background-color: #000080; */
+        color:white;
+      }
       .productListRow {
         width: 100%;
         margin-bottom: 0px;
@@ -390,6 +442,28 @@ width:105vw;
         align-items: center;
         /* justify-content: space-around; */
       }
+      div.productCard {
+        width: 100%;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1),
+          0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        text-align: center;
+      }
+
+      div.productTitle {
+        padding: 0px;
+      }
+
+
+        html body {
+
+      width:100%;
+      margin:0;
+      padding:0;
+      }
+      /* #mobileHeader { display: block; } */
+      .headerOptions { display: none; }
+
+
       .disclaimerContainer{
         margin-top: 40px;
         margin-top: 30px;
@@ -408,15 +482,14 @@ width:105vw;
 
       }
       .bannerContainer{
+        /* display:none; */
         width:100%;
         overflow: hidden;
 
       }
-      #productList{
-        padding-top: 0px;
-      }
 
       .floatingText {
+        /* display:none; */
         position: absolute;
         top: 50px;
         /* right: 10px; */
@@ -429,10 +502,11 @@ width:105vw;
         /* margin-top: 30px; */
         word-wrap: break-word;
         text-align: left;
-        width:100%;
+        width:95%;
         /* z-index: 0; */
       }
       .floatingSubtext{
+        /* display:none; */
         font-size: 5vw;
       }
 
@@ -449,8 +523,113 @@ width:100%;
 height:2px;
 background-color: #42d1d8;
 }
+h1 {
+    margin-right: 600px;
+  }
 
+.canvasContainer{
+  display:none;
 }
+.headerOptions { display: none; }
+
+.header{
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.content{
+  margin:0;
+  width:100%;
+}
+
+.blueLine{
+display:block;
+width:100%;
+height:2px;
+background-color: #42d1d8;
+/* 42d1d8 */
+}
+.greyLine{
+display:block;
+width:100%;
+height:1px;
+background-color: lightgray;
+}
+.mainContainer{
+    display:flex;
+    flex-direction: column;
+    width:100%;
+  }
+  .hamburgerMenu{
+    display:block;
+    font-size:30px;
+    margin-left: 20px;
+    margin-bottom: 7px;
+    margin-right: 5px;
+    text-decoration: none;
+    color: black;
+  }
+  #mySidenav {
+  
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  background-color: white;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  -webkit-box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.1); /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+    -moz-box-shadow: 0px 12px 25px rgba(189, 91, 91, 0.2); /* Firefox 3.5 - 3.6 */
+    box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.5); /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+    font-family: 'Gugi', cursive;
+}
+
+.sidenavHeader{
+/* display: flex;
+flex-direction: row;
+width:100%; */
+margin-bottom: 15px;
+}
+
+.sidenavHeader Label{
+  display:block;
+  position: absolute;
+  top:0;
+  margin-top: 15px;
+  padding-bottom: 25px;
+  margin-left: 30px;
+  font-size: 29px;
+  color: #42d1d8;
+  /* margin-left: 100px; */
+}
+#mySidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 22px;
+  color: #2854b8;
+  display: block;
+  transition: 0.3s;
+  font-family: 'Gugi', cursive;
+  background-color: white;
+}
+#mySidenav .closebtn {
+  display:block;
+  position: absolute;
+  top: 0px;
+  right: 25px;
+  font-weight: 100;
+  margin-left: 100px;
+  color: black;
+  cursor: none;
+  padding-bottom: 0px;
+  font-family: 'Noto Serif SC', serif;
+  font-size: 30px;
+  padding-top: 7px;
+}
+  }
+
 
 @media screen and (min-width: 800px) {
         body {

@@ -82,7 +82,7 @@
       <h2>Manufacturing Plant</h2>
       <p>
       Located in Ambernath MIDC., near Mumbai city (the commercial capital of India), Freesia's 
-      plant is a <span>ISO 9001:2015 certified</span> establishment where production, 
+      plant is an <span>ISO 9001:2015 certified</span> establishment where production, 
       R&D, quality control and quality assurance   takes place.
     </p>
     <p>
@@ -96,7 +96,7 @@
           &#9879&nbspEffluent treatment facility (Primary Treatment).<br>
         </p>
         <p>
-            <h4>Other utility equipments include:</h4>
+            <h4>Utility equipments:</h4>
             &#9879&nbspBoilers (600 kg capacity).		 <br>      	
             &#9879&nbspThemopack (4000 kcal).			  <br>          
             &#9879&nbspHigh vacuum set up with water jet.	<br>		
@@ -111,7 +111,7 @@
         <p>
       Continual innovations transpire in the Process Development lab where new products are developed 
       and scaled up, to study the chemical
-      kinetics and relative parameters for practical commercialization in the plant. 
+      kinetics and relative parameters for practical commercialization in our plant. 
       <br><br>
 
     
@@ -122,7 +122,7 @@
       Being a member of the Common Effluent Treatment Plant, Freesia has contributed and proposed 
       significant investments in controlling waste pollution.
       Freesia integrates a biological plant for treating
-      wastewater and recycling it for gardening purposes ensuring minimum waste pollution.
+      wastewater and recycling it for gardening purposes, ensuring minimum waste pollution.
     </p>
 
     <div>
@@ -365,8 +365,17 @@ redrawScene();
 
     .hamburgerMenu{
     display:none;
-
   }
+  .sidenavHeader Label{
+display:none;
+}
+#mySidenav a {
+  display:none;
+}
+
+#mySidenav .closebtn {
+  display:none;
+}
 
   body {
     margin: 0px;
@@ -480,24 +489,11 @@ redrawScene();
     /* text-decoration: none; */
     color: #2854b8;
   }
-.sidenavHeader Label{
-display:none;
-}
-#mySidenav a {
-  display:none;
-}
 
-#mySidenav .closebtn {
-  display:none;
-}
 
 
   /* #@#@#@#@##@#@#@#@##@#@#@#@##@#@#@#@##@#@#@#@##@#@#@#@##@#@#@#@##@#@#@#@# */
   @media screen and (max-width: 800px) {
-
-    h1 {
-    margin-right: 600px;
-  }
 
 .canvasContainer{
   display:none;
@@ -520,24 +516,28 @@ height:2px;
 background-color: #42d1d8;
 /* 42d1d8 */
 }
-.greyLine{
-display:block;
-width:100%;
-height:1px;
-background-color: lightgray;
-}
 .mainContainer{
     display:flex;
     flex-direction: column;
     width:100%;
   }
+  h1 {
+    margin-right: 600px;
+  }
+  .greyLine{
+display:block;
+width:100%;
+height:1px;
+background-color: lightgray;
+}
   .hamburgerMenu{
     display:block;
     font-size:30px;
     margin-left: 20px;
-    margin-bottom: 10px;
+    margin-bottom: 7px;
     margin-right: 5px;
     text-decoration: none;
+    color: black;
   }
   #mySidenav {
   
@@ -558,9 +558,6 @@ background-color: lightgray;
 }
 
 .sidenavHeader{
-/* display: flex;
-flex-direction: row;
-width:100%; */
 margin-bottom: 15px;
 }
 
@@ -573,7 +570,6 @@ margin-bottom: 15px;
   margin-left: 30px;
   font-size: 29px;
   color: #42d1d8;
-  /* margin-left: 100px; */
 }
 #mySidenav a {
   padding: 8px 8px 8px 32px;
@@ -585,28 +581,25 @@ margin-bottom: 15px;
   font-family: 'Gugi', cursive;
   background-color: white;
 }
-
-
 #mySidenav .closebtn {
   display:block;
   position: absolute;
   top: 0px;
   right: 25px;
-  font-size: 45px;
   font-weight: 100;
   margin-left: 100px;
   color: black;
   cursor: none;
-  padding-top: 0px;
   padding-bottom: 0px;
+  padding-bottom: 0px;
+  font-family: 'Noto Serif SC', serif;
+  font-size: 30px;
+  padding-top: 7px;
 }
   }
   @media screen and (min-width: 800px) {
 .blueLine{
 display:none;
-/* width:100%;
-border: 2px;
-border-color: #42d1d8 */
 }
 
   }
