@@ -47,7 +47,7 @@
           </div>
          
         <a href="index.html">Home</a>
-        <a href="index.html#productList">Products</a>
+        <a href="index.html#productListHook" onclick="closeNav()">Products</a>
         <a href="./screens/about.html">About</a>
         <a href="./screens/contact.html">Contact</a>
 
@@ -86,7 +86,7 @@
     xmlhttp.open("GET", "json_demo.txt", true);
     xmlhttp.send();
     </script> -->
-
+    <div id="productListHook">
       <div id="productList" class="productListContainer">
         <h2>Product List</h2>
 
@@ -411,7 +411,7 @@ display:none;
       @media screen and (max-width: 800px) {
 
         #productList{
-        padding-top: 10px;
+          padding-top: 60px;
       }
       .productListContainer {
         width: 100%;
@@ -450,6 +450,7 @@ display:none;
       }
 
       div.productTitle {
+
         padding: 0px;
       }
 
