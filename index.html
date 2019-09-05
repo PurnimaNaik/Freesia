@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-      <title>Freesia Chemicals</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
-      <link
+    <title>Freesia Chemicals</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      type="text/javascript"
+      src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"
+    ></script>
+    <link
       href="https://fonts.googleapis.com/css?family=Vollkorn+SC&display=swap"
       rel="stylesheet"
     />
@@ -16,18 +19,17 @@
       href="https://fonts.googleapis.com/css?family=Noto+Serif+SC&display=swap"
       rel="stylesheet"
     />
-    
+
     <title>Page Title</title>
   </head>
   <body>
     <div class="header" id="myHeader">
       <div class="headerContainer">
-
-          <!-- <div id="mobileHeader">
+        <!-- <div id="mobileHeader">
               <h1><a href="index.html#productList">mobile</a></h1>
           </div> -->
 
-          <span class="hamburgerMenu" onclick="openNav()">&#9776;</span>
+        <span class="hamburgerMenu" onclick="openNav()">&#9776;</span>
         <h1><a href="index.html">Freesia</a></h1>
 
         <div class="headerOptions">
@@ -40,41 +42,52 @@
     </div>
 
     <div id="mySidenav" class="sidenav">
-        <div class="sidenavHeader">
-          <Label>Menu</Label>
-            <div><button href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</button></div>
-            <div class="greyLine"></div>
-          </div>
-         
-        <a href="index.html">Home</a>
-        <a href="index.html#productListHook" onclick="closeNav()">Products</a>
-        <a href="./screens/about.html">About</a>
-        <a href="./screens/contact.html">Contact</a>
-
+      <div class="sidenavHeader">
+        <Label>Menu</Label>
+        <div>
+          <button
+            href="javascript:void(0)"
+            class="closebtn"
+            onclick="closeNav()"
+          >
+            &times;
+          </button>
+        </div>
+        <div class="greyLine"></div>
       </div>
 
+      <a href="index.html">Home</a>
+      <a href="index.html#productListHook" onclick="closeNav()">Products</a>
+      <a href="./screens/about.html">About</a>
+      <a href="./screens/contact.html">Contact</a>
+    </div>
 
     <div class="container">
       <div class="content">
         <div class="row">
           <div class="banner">
             <div class="bannerContainer">
-                <img src="./images/banner.jpg" alt="beaker banner" class="responsive" />
+              <img
+                src="./images/banner.jpg"
+                alt="beaker banner"
+                class="responsive"
+              />
             </div>
-            
+
             <div class="floatingText">
               India's largest supplier for Cyclopentanone and it's derivatives.
-             <div class="floatingSubtextContainer"> <p class="floatingSubtext"> Developers of custom chemical compounds 
-              for  chemical and pharma industry needs. </p></div>
+              <div class="floatingSubtextContainer">
+                <p class="floatingSubtext">
+                  Developers of custom chemical compounds for chemical and
+                  pharma industry needs.
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-
-
-
-<!-- 
+      <!-- 
 <script>
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {
@@ -86,56 +99,110 @@
     xmlhttp.open("GET", "json_demo.txt", true);
     xmlhttp.send();
     </script> -->
-    <div id="productListHook">
-      <div id="productList" class="productListContainer">
-        <h2>Product List</h2>
+      <div id="productListHook">
+        <div id="productList" class="productListContainer">
+          <h2>Product List</h2>
 
-        <div class="productListRow">
-          <div class="productCard" onclick="window.open('screens/product/cyclopentanone.html', '_blank');" target="_blank" style="cursor:pointer;">
-            
-            <div class="imageContainer"><img src="./images/cyclopentanone.jpg" alt="Norway"  class="image" /></div>
+          <div class="productListRow">
+            <div
+              class="productCard"
+              onclick="window.open('screens/product/cyclopentanone.html', '_blank');"
+              target="_blank"
+              style="cursor:pointer;"
+            >
+              <div class="imageContainer">
+                <img
+                  src="./images/cyclopentanone.jpg"
+                  alt="Norway"
+                  class="image"
+                />
+              </div>
+              <div class="productTitle">
+                <h4>Cyclopentanone</h4>
+                <h5>CAS No. 120-92-3</h5>
+              </div>
+            </div>
+
+            <div class="productCard"
+            onclick="window.open('screens/product/cyclopentanol.html',
+            '_blank');"">
+            <div class="imageContainer">
+              <img
+                src="./images/cyclopentanol.jpg"
+                alt="Norway"
+                class="image"
+              />
+            </div>
             <div class="productTitle">
-              <h4>Cyclopentanone</h4>
-              <h5>CAS No. 120-92-3</h5>
+              <h4>Cyclopentanol</h4>
+              <h5>CAS No. 96-41-3</h5>
             </div>
           </div>
 
-          <div class="productCard" onclick="window.open('screens/product/cyclopentanol.html', '_blank');"">
-              <div class="imageContainer"><img src="./images/cyclopentanol.jpg" alt="Norway"  class="image" /></div>
-            <div class="productTitle">
-                <h4>Cyclopentanol</h4>
-                <h5>CAS No. 96-41-3</h5>
+          <div
+            class="productCard"
+            onclick="window.open('screens/product/cyclopentylBromide.html', '_blank');"
+          >
+            <div class="imageContainer">
+              <img
+                src="./images/cyclopentylBromide.jpg"
+                alt="Norway"
+                class="image"
+              />
             </div>
-          </div>
-
-          <div class="productCard" onclick="window.open('screens/product/cyclopentylBromide.html', '_blank');">
-              <div class="imageContainer"><img src="./images/cyclopentylBromide.jpg" alt="Norway"  class="image" /></div>
             <div class="productTitle">
-                <h4>Cyclopentyl Bromide</h4>
-                <h5>CAS No. 137-43-9</h5>
+              <h4>Cyclopentyl Bromide</h4>
+              <h5>CAS No. 137-43-9</h5>
             </div>
           </div>
         </div>
 
         <div class="productListRow">
-          <div class="productCard" onclick="window.open('screens/product/cyclopentylChloride.html', '_blank');">
-              <div class="imageContainer"><img src="./images/cyclopentylChloride.jpg" alt="Norway"  class="image" /></div>
+          <div
+            class="productCard"
+            onclick="window.open('screens/product/cyclopentylChloride.html', '_blank');"
+          >
+            <div class="imageContainer">
+              <img
+                src="./images/cyclopentylChloride.jpg"
+                alt="Norway"
+                class="image"
+              />
+            </div>
             <div class="productTitle">
               <h4>Cyclopentyl Chloride</h4>
               <h5>CAS No. 930-28-9</h5>
             </div>
           </div>
 
-          <div class="productCard" onclick="window.open('screens/product/cyclopentylAmine.html', '_blank');">
-              <div class="imageContainer"><img src="./images/cyclopentylAmine.jpg" alt="Norway"  class="image" /></div>
+          <div
+            class="productCard"
+            onclick="window.open('screens/product/cyclopentylAmine.html', '_blank');"
+          >
+            <div class="imageContainer">
+              <img
+                src="./images/cyclopentylAmine.jpg"
+                alt="Norway"
+                class="image"
+              />
+            </div>
             <div class="productTitle">
               <h4>Cyclopentyl Amine</h4>
-              <h5>CAS  No. 1003-03-8</h5>
+              <h5>CAS No. 1003-03-8</h5>
             </div>
           </div>
 
-          <div class="productCard" onclick="window.open('screens/product/alphaTetralone.html', '_blank');">
-              <div class="imageContainer"><img src="./images/alphaTetralone.jpg" alt="Norway"  class="image" /></div>
+          <div
+            class="productCard"
+            onclick="window.open('screens/product/alphaTetralone.html', '_blank');"
+          >
+            <div class="imageContainer">
+              <img
+                src="./images/alphaTetralone.jpg"
+                alt="Norway"
+                class="image"
+              />
+            </div>
             <div class="productTitle">
               <h4>Alpha Tetralone</h4>
               <h5>CAS No. 529-34-0</h5>
@@ -144,24 +211,51 @@
         </div>
 
         <div class="productListRow">
-          <div class="productCard" onclick="window.open('screens/product/1-5Dibromopentane.html', '_blank');">
-              <div class="imageContainer"><img src="./images/1-5Dibromopentane.jpg" alt="Norway"  class="image" /></div>
+          <div
+            class="productCard"
+            onclick="window.open('screens/product/1-5Dibromopentane.html', '_blank');"
+          >
+            <div class="imageContainer">
+              <img
+                src="./images/1-5Dibromopentane.jpg"
+                alt="Norway"
+                class="image"
+              />
+            </div>
             <div class="productTitle">
               <h4>1-5 Dibromopentane</h4>
               <h5>CAS No. 111-24-0</h5>
             </div>
           </div>
 
-          <div class="productCard" onclick="window.open('screens/product/Bromo5Chloropentane.html', '_blank');">
-              <div class="imageContainer"><img src="./images/1Bromo5Chloropentane.jpg" alt="Norway"  class="image" /></div>
+          <div
+            class="productCard"
+            onclick="window.open('screens/product/Bromo5Chloropentane.html', '_blank');"
+          >
+            <div class="imageContainer">
+              <img
+                src="./images/1Bromo5Chloropentane.jpg"
+                alt="Norway"
+                class="image"
+              />
+            </div>
             <div class="productTitle">
               <h4>1-Bromo-5-Chloropentane</h4>
               <h5>CAS No. 54512-75-3</h5>
             </div>
           </div>
 
-          <div class="productCard" onclick="window.open('screens/product/4Phenyl1Butanol.html', '_blank');">
-              <div class="imageContainer"><img src="./images/4Phynel1Butanol.jpg" alt="Norway"  class="image" /></div>
+          <div
+            class="productCard"
+            onclick="window.open('screens/product/4Phenyl1Butanol.html', '_blank');"
+          >
+            <div class="imageContainer">
+              <img
+                src="./images/4Phynel1Butanol.jpg"
+                alt="Norway"
+                class="image"
+              />
+            </div>
             <div class="productTitle">
               <h4>4-Phnyel-1-Butanol</h4>
               <h5>CAS No. 3360-41-6</h5>
@@ -170,34 +264,48 @@
         </div>
 
         <div class="productListRow">
-          <div class="productCard" onclick="window.open('screens/product/Methyl-4-phenyl-butyrate.html', '_blank');">
-              <div class="imageContainer"><img src="./images/Methyl-4-phenyl-butyrate.jpg" alt="Norway"  class="image" /></div>
+          <div
+            class="productCard"
+            onclick="window.open('screens/product/Methyl-4-phenyl-butyrate.html', '_blank');"
+          >
+            <div class="imageContainer">
+              <img
+                src="./images/Methyl-4-phenyl-butyrate.jpg"
+                alt="Norway"
+                class="image"
+              />
+            </div>
             <div class="productTitle">
               <h4>Methyl-4-Phenyl-1 Butyrate</h4>
               <h5>CAS No. 2046-17-5</h5>
             </div>
           </div>
 
-          <div class="productCard" onclick="window.open('screens/product/diethylKetone.html', '_blank');">
-              <div class="imageContainer"><img src="./images/diethylKetone.jpg" alt="Norway"  class="image" /></div>
+          <div
+            class="productCard"
+            onclick="window.open('screens/product/diethylKetone.html', '_blank');"
+          >
+            <div class="imageContainer">
+              <img
+                src="./images/diethylKetone.jpg"
+                alt="Norway"
+                class="image"
+              />
+            </div>
             <div class="productTitle">
               <h4>Diethyl Ketone</h4>
               <h5>CAS No. 96-22-0</h5>
             </div>
           </div>
-
         </div>
-
 
         <div class="disclaimerContainer">
-            <div class="disclaimer">Posted by: Purnima Naik    |    © 2019 All rights reserved</div>
+          <div class="disclaimer">
+            Posted by: Purnima Naik | © 2019 All rights reserved
+          </div>
         </div>
-        
       </div>
-
-      
     </div>
-
 
     <script>
       window.onscroll = function() {
@@ -216,435 +324,434 @@
       }
 
       function openNav() {
-  document.getElementById("mySidenav").style.width = "250px";
-}
+        document.getElementById('mySidenav').style.width = '250px';
+      }
 
-function closeNav() {
-  document.getElementById("mySidenav").style.width = "0";
-}
+      function closeNav() {
+        document.getElementById('mySidenav').style.width = '0';
+      }
     </script>
     <div class="blueLine"></div>
   </body>
 </html>
 
-    <style>
-          .hamburgerMenu{
-    display:none;
+<style>
+  .hamburgerMenu {
+    display: none;
   }
-  .sidenavHeader Label{
-display:none;
-}
-#mySidenav a {
-  display:none;
-}
+  .sidenavHeader label {
+    display: none;
+  }
+  #mySidenav a {
+    display: none;
+  }
 
-#mySidenav .closebtn {
-  display:none;-webkit-appearance: none;
-}
-      body {
-        margin: 0;
-        font-family: 'Noto Serif SC', serif;
-        color: #42d1d8;
-        background-color: #F4FFFF;
-      }
-      h1 {
-        font-family: 'Gugi', cursive;
-        font-size: 45px;
-        font-weight: 300;
-        margin: 0;
-      }
-      h1 a{
-        text-decoration: none;
-        color: #2854b8;
-      }
-      h3 {
-        color: #42d1d8;
-        font-family: 'Gugi', cursive;
-        font-weight: 300;
-      }
-      h4{
-        margin-top:6px;
-        margin-bottom:5px;
-      }
-      h5{
-        margin-top:0px;
-        margin-bottom:10px;
-      }
-      .responsive {
-        margin: 0;
-        width: 100%;
-        height: auto;
-      }
-      .sticky {
-        position: fixed;
-        top: 0;
-        width: 100%;
-      }
+  #mySidenav .closebtn {
+    display: none;
+    -webkit-appearance: none;
+    background: transparent;
+  }
+  body {
+    margin: 0;
+    font-family: 'Noto Serif SC', serif;
+    color: #42d1d8;
+    background-color: #f4ffff;
+  }
+  h1 {
+    font-family: 'Gugi', cursive;
+    font-size: 45px;
+    font-weight: 300;
+    margin: 0;
+  }
+  h1 a {
+    text-decoration: none;
+    color: #2854b8;
+  }
+  h3 {
+    color: #42d1d8;
+    font-family: 'Gugi', cursive;
+    font-weight: 300;
+  }
+  h4 {
+    margin-top: 6px;
+    margin-bottom: 5px;
+  }
+  h5 {
+    margin-top: 0px;
+    margin-bottom: 10px;
+  }
+  .responsive {
+    margin: 0;
+    width: 100%;
+    height: auto;
+  }
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
 
-      .sticky + .content {
-        padding-top: 10px;
-      }
-      .header {
-        
-        padding: 2px 22px;
-        background: #ffffff;
-        color: #2854b8;
-        -webkit-box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.1); /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
-        -moz-box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.1); /* Firefox 3.5 - 3.6 */
-        box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.1); /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
-        z-index: 10;
-      }
+  .sticky + .content {
+    padding-top: 10px;
+  }
+  .header {
+    padding: 2px 22px;
+    background: #ffffff;
+    color: #2854b8;
+    -webkit-box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.1); /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+    -moz-box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.1); /* Firefox 3.5 - 3.6 */
+    box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.1); /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+    z-index: 10;
+  }
 
-      .headerContainer {
-        display: flex;
-        flex-direction: row;
-        -webkit-flex: 1; /* Safari 6.1+ */
-        -ms-flex: 1; /* IE 10 */
-        flex: 1;
-        justify-content: space-between;
-        align-items: center;
-        /* flex-grow: 500; */
-      }
-      .headerOptions {
-        flex: 0 0 500px;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-around;
-        padding-right: 20px;
-      }
-      .headerOptions a {
-        color: #42d1d8;
-        font-family: 'Gugi', cursive;
-        font-weight: 300;
-        font-size: 20px;
-        text-decoration: none;
-      }
-      .headerOptions a:hover {
-        color: #2854b8;
-      }
-      .floatingText {
-        position: absolute;
-        top: 100px;
-        right: 65px;
-        font-family: 'Noto Serif SC', serif;
-        font-weight: 300;
-        font-size: 35px;
-        color: #ffffff;
-        margin-left: 500px;
-        margin-top: 30px;
-        word-wrap: break-word;
-        text-align: right;
-        width:650px;
-        /* z-index: 0; */
-      }
-      .floatingSubtext{
-        font-size: 20px;
-      }
-      .floatingSubtextContainer{
-        /* width:800px; */
-      }
-      #productList{
-        padding-top: 107px;
-      }
-      .productListContainer {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        justify-content: space-around;
-      }
-      .productListContainer h2 {
-        margin-bottom: 30px;
-        color: #42d1d8;
-        font-family: 'Gugi', cursive;
-        font-weight: 300;
-        font-size: 35px;
-      }
-      .productCard{
-        background-color: #42d1d8;
-        /* background-color: #2854b8; */
-        /* background-color: #000080; */
-        color:white;
-      }
-      .productListRow {
-        width: 100%;
-        margin-bottom: 60px;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-around;
-      }
-      div.productCard {
-        width: 350px;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1),
-          0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        text-align: center;
-      }
+  .headerContainer {
+    display: flex;
+    flex-direction: row;
+    -webkit-flex: 1; /* Safari 6.1+ */
+    -ms-flex: 1; /* IE 10 */
+    flex: 1;
+    justify-content: space-between;
+    align-items: center;
+    /* flex-grow: 500; */
+  }
+  .headerOptions {
+    flex: 0 0 500px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding-right: 20px;
+  }
+  .headerOptions a {
+    color: #42d1d8;
+    font-family: 'Gugi', cursive;
+    font-weight: 300;
+    font-size: 20px;
+    text-decoration: none;
+  }
+  .headerOptions a:hover {
+    color: #2854b8;
+  }
+  .floatingText {
+    position: absolute;
+    top: 100px;
+    right: 65px;
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 300;
+    font-size: 35px;
+    color: #ffffff;
+    margin-left: 500px;
+    margin-top: 30px;
+    word-wrap: break-word;
+    text-align: right;
+    width: 650px;
+    /* z-index: 0; */
+  }
+  .floatingSubtext {
+    font-size: 20px;
+  }
+  .floatingSubtextContainer {
+    /* width:800px; */
+  }
+  #productList {
+    padding-top: 107px;
+  }
+  .productListContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-around;
+  }
+  .productListContainer h2 {
+    margin-bottom: 30px;
+    color: #42d1d8;
+    font-family: 'Gugi', cursive;
+    font-weight: 300;
+    font-size: 35px;
+  }
+  .productCard {
+    background-color: #42d1d8;
+    /* background-color: #2854b8; */
+    /* background-color: #000080; */
+    color: white;
+  }
+  .productListRow {
+    width: 100%;
+    margin-bottom: 60px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
+  div.productCard {
+    width: 350px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+  }
 
-      div.productTitle {
-        padding: 10px;
-      }
-      .disclaimer{
-        text-align: center;
-        color:black;
-        font-size: 12px;
-        /* font-weight: 300; */
-        padding-bottom: 5px;
-      }
-      .disclaimerContainer{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-      .image{
-        width:200px;
-        height:200px;
-      }
-      .imageContainer{
-        width:100%;
-        background-color: white;
-      }
+  div.productTitle {
+    padding: 10px;
+  }
+  .disclaimer {
+    text-align: center;
+    color: black;
+    font-size: 12px;
+    /* font-weight: 300; */
+    padding-bottom: 5px;
+  }
+  .disclaimerContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .image {
+    width: 200px;
+    height: 200px;
+  }
+  .imageContainer {
+    width: 100%;
+    background-color: white;
+  }
 
   /* #@#@#@#@##@#@#@#@##@#@#@#@##@#@#@#@##@#@#@#@##@#@#@#@##@#@#@#@##@#@#@#@# */
-      @media screen and (max-width: 800px) {
+  @media screen and (max-width: 800px) {
+    #productList {
+      padding-top: 60px;
+    }
+    .productListContainer {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      justify-content: space-around;
+    }
+    .productListContainer h2 {
+      margin-bottom: 30px;
+      color: #42d1d8;
+      font-family: 'Gugi', cursive;
+      font-weight: 300;
+      font-size: 35px;
+    }
+    .productCard {
+      background-color: #42d1d8;
+      /* background-color: #2854b8; */
+      /* background-color: #000080; */
+      color: white;
+    }
+    .productListRow {
+      width: 100%;
+      margin-bottom: 0px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      /* justify-content: space-around; */
+    }
+    div.productCard {
+      width: 100%;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1),
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      text-align: center;
+    }
 
-        #productList{
-          padding-top: 60px;
-      }
-      .productListContainer {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        justify-content: space-around;
-      }
-      .productListContainer h2 {
-        margin-bottom: 30px;
-        color: #42d1d8;
-        font-family: 'Gugi', cursive;
-        font-weight: 300;
-        font-size: 35px;
-      }
-      .productCard{
-        background-color: #42d1d8;
-        /* background-color: #2854b8; */
-        /* background-color: #000080; */
-        color:white;
-      }
-      .productListRow {
-        width: 100%;
-        margin-bottom: 0px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        /* justify-content: space-around; */
-      }
-      div.productCard {
-        width: 100%;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1),
-          0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        text-align: center;
-      }
+    div.productTitle {
+      padding: 0px;
+    }
 
-      div.productTitle {
+    html body {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    /* #mobileHeader { display: block; } */
+    .headerOptions {
+      display: none;
+    }
 
-        padding: 0px;
-      }
+    .disclaimerContainer {
+      margin-top: 40px;
+      margin-top: 30px;
+    }
+    .disclaimer {
+      text-align: center;
+      color: black;
+      font-size: 8px;
+      /* font-weight: 300; */
+      padding-bottom: 5px;
+    }
+    .responsive {
+      width: 220%;
+      margin: 0;
+      height: auto;
+    }
+    .bannerContainer {
+      /* display:none; */
+      width: 100%;
+      overflow: hidden;
+    }
 
+    .floatingText {
+      /* display:none; */
+      position: absolute;
+      top: 50px;
+      /* right: 10px; */
+      left: 10px;
+      font-family: 'Noto Serif SC', serif;
+      font-weight: 300;
+      font-size: 8vw;
+      color: #ffffff;
+      margin-left: 0px;
+      /* margin-top: 30px; */
+      word-wrap: break-word;
+      text-align: left;
+      width: 95%;
+      /* z-index: 0; */
+    }
+    .floatingSubtext {
+      /* display:none; */
+      font-size: 5vw;
+    }
 
-        html body {
+    .productListContainer h2 {
+      margin-bottom: 30px;
+      color: #42d1d8;
+      font-family: 'Gugi', cursive;
+      font-weight: 300;
+      font-size: 7vw;
+    }
+    .blueLine {
+      display: block;
+      width: 100%;
+      height: 2px;
+      background-color: #42d1d8;
+    }
+    h1 {
+      margin-right: 600px;
+    }
 
-      width:100%;
-      margin:0;
-      padding:0;
-      }
-      /* #mobileHeader { display: block; } */
-      .headerOptions { display: none; }
+    .canvasContainer {
+      display: none;
+    }
+    .headerOptions {
+      display: none;
+    }
 
+    .header {
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+    .content {
+      margin: 0;
+      width: 100%;
+    }
 
-      .disclaimerContainer{
-        margin-top: 40px;
-        margin-top: 30px;
-      }
-      .disclaimer{
-        text-align: center;
-        color:black;
-        font-size: 8px;
-        /* font-weight: 300; */
-        padding-bottom: 5px;
-      }
-      .responsive {
-        width: 220%; 
-        margin: 0;
-        height: auto;
+    .blueLine {
+      display: block;
+      width: 100%;
+      height: 2px;
+      background-color: #42d1d8;
+      /* 42d1d8 */
+    }
+    .greyLine {
+      display: block;
+      width: 100%;
+      height: 1px;
+      background-color: lightgray;
+    }
+    .mainContainer {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+    .hamburgerMenu {
+      display: block;
+      font-size: 30px;
+      margin-left: 20px;
+      margin-bottom: 7px;
+      margin-right: 5px;
+      text-decoration: none;
+      color: black;
+    }
+    #mySidenav {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 2;
+      top: 0;
+      left: 0;
+      background-color: white;
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 60px;
+      -webkit-box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.1);
+      -moz-box-shadow: 0px 12px 25px rgba(189, 91, 91, 0.2);
+      box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.5);
+      font-family: 'Gugi', cursive;
+    }
 
-      }
-      .bannerContainer{
-        /* display:none; */
-        width:100%;
-        overflow: hidden;
-
-      }
-
-      .floatingText {
-        /* display:none; */
-        position: absolute;
-        top: 50px;
-        /* right: 10px; */
-        left:10px;
-        font-family: 'Noto Serif SC', serif;
-        font-weight: 300;
-        font-size: 8vw;
-        color: #ffffff;
-        margin-left: 0px;
-        /* margin-top: 30px; */
-        word-wrap: break-word;
-        text-align: left;
-        width:95%;
-        /* z-index: 0; */
-      }
-      .floatingSubtext{
-        /* display:none; */
-        font-size: 5vw;
-      }
-
-      .productListContainer h2 {
-        margin-bottom: 30px;
-        color: #42d1d8;
-        font-family: 'Gugi', cursive;
-        font-weight: 300;
-        font-size: 7vw;
-      }
-      .blueLine{
-display:block;
-width:100%;
-height:2px;
-background-color: #42d1d8;
-}
-h1 {
-    margin-right: 600px;
-  }
-
-.canvasContainer{
-  display:none;
-}
-.headerOptions { display: none; }
-
-.header{
-  padding-left: 0px;
-  padding-right: 0px;
-}
-.content{
-  margin:0;
-  width:100%;
-}
-
-.blueLine{
-display:block;
-width:100%;
-height:2px;
-background-color: #42d1d8;
-/* 42d1d8 */
-}
-.greyLine{
-display:block;
-width:100%;
-height:1px;
-background-color: lightgray;
-}
-.mainContainer{
-    display:flex;
-    flex-direction: column;
-    width:100%;
-  }
-  .hamburgerMenu{
-    display:block;
-    font-size:30px;
-    margin-left: 20px;
-    margin-bottom: 7px;
-    margin-right: 5px;
-    text-decoration: none;
-    color: black;
-  }
-  #mySidenav {
-  
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 2;
-  top: 0;
-  left: 0;
-  background-color: white;
-  overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 60px;
-  -webkit-box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.1); /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
-    -moz-box-shadow: 0px 12px 25px rgba(189, 91, 91, 0.2); /* Firefox 3.5 - 3.6 */
-    box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.5); /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
-    font-family: 'Gugi', cursive;
-}
-
-.sidenavHeader{
-/* display: flex;
+    .sidenavHeader {
+      /* display: flex;
 flex-direction: row;
 width:100%; */
-margin-bottom: 15px;
-}
+      margin-bottom: 15px;
+    }
 
-.sidenavHeader Label{
-  display:block;
-  position: absolute;
-  top:0;
-  margin-top: 15px;
-  padding-bottom: 25px;
-  margin-left: 30px;
-  font-size: 29px;
-  color: #42d1d8;
-  /* margin-left: 100px; */
-}
-#mySidenav a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 22px;
-  color: #2854b8;
-  display: block;
-  transition: 0.3s;
-  font-family: 'Gugi', cursive;
-  background-color: white;
-}
-#mySidenav .closebtn {
-  display:block;
-  position: absolute;
-  top: 0px;
-  right: 25px;
-  font-weight: 100;
-  margin-left: 100px;
-  color: black;
-  cursor: none;
-  padding-bottom: 0px;
-  font-family: 'Noto Serif SC', serif;
-  font-size: 30px;
-  padding-top: 7px;
-  -webkit-appearance: none;
-}
+    .sidenavHeader label {
+      display: block;
+      position: absolute;
+      top: 0;
+      margin-top: 15px;
+      padding-bottom: 25px;
+      margin-left: 30px;
+      font-size: 29px;
+      color: #42d1d8;
+      /* margin-left: 70px; */
+    }
+    #mySidenav a {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 22px;
+      color: #2854b8;
+      display: block;
+      transition: 0.3s;
+      font-family: 'Gugi', cursive;
+      background-color: white;
+    }
+    #mySidenav .closebtn {
+      display: block;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      font-weight: 100;
+      margin-left: 70px;
+      color: black;
+      cursor: none;
+      padding-bottom: 0px;
+      font-family: 'Noto Serif SC', serif;
+      font-size: 30px;
+      padding-top: 7px;padding-right: 6px;
+      -webkit-appearance: none;
+      background: transparent;
+      border: none;
+      background-color: transperant;
+      outline: none;
+    }
   }
 
-
-@media screen and (min-width: 800px) {
-        body {
-        margin: 0;
-        font-family: 'Noto Serif SC', serif;
-        color: #42d1d8;
-        /* background-color: green; */
-      }
-      #mobileHeader { display: none; }
-      .blueLine{
-display:none;
-}
-}
-
-    </style>
-
+  @media screen and (min-width: 800px) {
+    body {
+      margin: 0;
+      font-family: 'Noto Serif SC', serif;
+      color: #42d1d8;
+      /* background-color: green; */
+    }
+    #mobileHeader {
+      display: none;
+    }
+    .blueLine {
+      display: none;
+    }
+  }
+</style>

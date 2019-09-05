@@ -406,6 +406,9 @@ function closeNav() {
     transition-duration: 0.4s;
     outline: none;
     -webkit-appearance: none;
+    border-radius: 0;
+     -webkit-border-radius:0px;
+    
   }
   .submit {
     background-color: #4caf50;
@@ -437,6 +440,8 @@ function closeNav() {
     padding: 3px 0px 3px 3px;
     margin: 5px 1px 3px 0px;
     border: 1px solid #dddddd;
+    border-radius: 0;
+    -webkit-border-radius:0px;
   }
 
   input[type='text']:focus,
@@ -445,12 +450,16 @@ function closeNav() {
     padding: 3px 0px 3px 3px;
     margin: 5px 1px 3px 0px;
     border: 1px solid #dddddd;
+    border-radius: 0;
+    -webkit-border-radius:0px;
   }
 
   textarea {
     /* width:500px; */
     height: 105px;
     resize: none;
+    border-radius: 0;
+    -webkit-border-radius:0px;
   }
   .header {
     padding: 2px 22px;
@@ -622,7 +631,7 @@ padding-bottom: 25px;
 margin-left: 30px;
 font-size: 29px;
 color: #42d1d8;
-/* margin-left: 100px; */
+/* margin-left: 70px; */
 }
 #mySidenav a {
 padding: 8px 8px 8px 32px;
@@ -638,17 +647,21 @@ background-color: white;
 display:block;
 position: absolute;
 top: 0px;
-right: 25px;
+right: 0px;
 font-weight: 100;
-margin-left: 100px;
+margin-left: 70px;
 color: black;
 cursor: none;
 padding-bottom: 0px;
 padding-bottom: 0px;
   font-family: 'Noto Serif SC', serif;
   font-size: 30px;
-  padding-top: 7px;
+  padding-top: 7px;padding-right: 6px;
   -webkit-appearance: none;
+      background: transparent;
+      border: none;
+      background-color: transperant;
+      outline: none;
 }
 }
 @media screen and (min-width: 800px) {
