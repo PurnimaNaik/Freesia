@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cyclopentanol</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-147321955-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'UA-147321955-1');
+    </script>
+
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    
+    <script>
+      type = 'text/javascript';
+      src = 'http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js';
+    </script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Croissant+One|Gugi|Lily+Script+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Noto+Serif+SC&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="header" id="myHeader">
+      <div class="headerContainer">
+          <span class="hamburgerMenu" onclick="openNav()">&#9776;</span>
+        <h1><a href="../../index.html">Freesia</a></h1>
+
+        <div class="headerOptions">
+          <a href="../../index.html">Home</a>
+          <a href="../../index.html#productList">Products</a>
+          <a href="../about.html">About</a>
+          <a href="../contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+
+    <div id="mySidenav" class="sidenav">
+        <div class="sidenavHeader">
+          <Label>Menu</Label>
+            <div><button href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</button></div>
+            <div class="greyLine"></div>
+          </div>
+         
+        <a href="../../index.html">Home</a>
+        <a href="../../index.html#productList">Products</a>
+        <a href="../about.html">About</a>
+        <a href="../contact.html">Contact</a>
+
+      </div>
+
+    <div class="mainContainer">
+      <div class="content">
+        <div class="papers">
+            <h1>Cyclopentanol</h1>
+          <h2>Identitiers</h2>
+          <table>
+            <tr>
+              <td class="title">CAS number</td>
+              <td class="desc">96-41-3</td>
+            </tr>
+            <tr>
+              <td class="title">Appearance</td>
+              <td class="desc">clear, colourless liquid</td>
+            </tr>
+          </table>
+
+          <h2>Properties</h2>
+          <table>
+            <tr>
+              <td class="title">Molecular formula</td>
+              <td class="desc">C5H10O</td>
+            </tr>
+            <tr>
+              <td class="title">Molar mass</td>
+              <td class="desc">
+                86.13g/mol
+              </td>
+            </tr>
+            <tr>
+              <td class="title">Density</td>
+              <td class="desc">
+                  0.949g/ml
+              </td>
+            </tr>
+            <tr>
+              <td class="title">Boiling point</td>
+              <td class="desc">139 ~ 140&#8451;</td>
+            </tr>
+            <tr>
+              <td class="title">Flash Point</td>
+              <td class="desc">51&#8451;</td>
+            </tr>
+            <tr>
+              <td class="title">Purity</td>
+              <td class="desc">99.0% min</td>
+            </tr>
+            <tr>
+              <td class="title">Moisture</td>
+              <td class="desc">0.3% max</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div class="widgetContainer">
+        <div class="widgetStyle">
+          <iframe
+            class="pubchem-widget"
+            src="https://pubchem.ncbi.nlm.nih.gov/compound/7298#section=3D-Conformer&embed=true&hide_title=true"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+    <br/><br/><br/><br/>
+    <script>
+      window.onscroll = function() {
+        myFunction();
+      };
+
+      var header = document.getElementById('myHeader');
+      var sticky = header.offsetTop;
+
+      function myFunction() {
+        if (window.pageYOffset > sticky) {
+          header.classList.add('sticky');
+        } else {
+          header.classList.remove('sticky');
+        }
+      }
+      function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+    </script>
+    <div class="blueLine"></div>
+  </body>
+</html>
+
+<style>
+        .hamburgerMenu{
+    display:none;
+  }
+  .sidenavHeader Label{
+display:none;
+}
+#mySidenav a {
+  display:none;
+}
+
+#mySidenav .closebtn {
+  display:none;-webkit-appearance: none;
+}
+  body {
+    background: #ffffff;
+    font-family: 'Noto Serif SC', serif;
+    margin: 0;
+  }
+  table {
+    border-collapse: collapse;
+    background: #ffffff;
+    width: 100%;
+    border: 1px solid #ddd;
+    margin-bottom: 30px;
+  }
+
+  th,
+  td {
+    text-align: left;
+    padding: 8px;
+    border: 1px solid #ddd;
+  }
+  .desc {
+    padding-left: 10px;
+    width: 350px;
+  }
+  .title {
+    /* background: #EDFBFF; */
+    font-weight: bold;
+  }
+
+  /* tr:nth-child(even){
+  background-color: #EDFFF0
+  }
+  tr:nth-child(odd){
+  background-color: #EDF6FF
+  } */
+
+  .papers,
+  .papers:before,
+  .papers:after {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: inset 0 0 2px rgba(0, 0, 0, 0), 1px 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  .papers {
+    position: relative;
+    width: 50%;
+    padding: 2em;
+    margin-left: 20px;
+    width: 480px;
+    
+  }
+
+  .papers:before,
+  .papers:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-transform: rotateZ(2.5deg);
+    -o-transform: rotate(2.5deg);
+    transform: rotateZ(2.5deg);
+    z-index: -1;
+  }
+
+  .papers:after {
+    -webkit-transform: rotateZ(-2.5deg);
+    -o-transform: rotate(-2.5deg);
+    transform: rotateZ(-2.5deg);
+  }
+  h1{
+
+color: black;
+font-family: 'Gugi', cursive;
+font-weight: 300;
+font-size: 28px;
+}
+  h2 {
+    color: #42d1d8;
+    font-family: 'Gugi', cursive;
+    font-weight: 300;
+    font-size: 20px;
+  }
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+
+  .sticky + .content {
+    padding-top: 10px;
+  }
+  .header {
+    margin: 0;
+    width: 100%;
+    padding: 2px 22px;
+    background: #ffffff;
+    color: #2854b8;
+    -webkit-box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.1); /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+    -moz-box-shadow: 0px 12px 25px rgba(189, 91, 91, 0.2); /* Firefox 3.5 - 3.6 */
+    box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.1); /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+    z-index: 1
+  }
+
+  .headerContainer {
+    display: flex;
+    flex-direction: row;
+    -webkit-flex: 1; /* Safari 6.1+ */
+    -ms-flex: 1; /* IE 10 */
+    flex: 1;
+    justify-content: space-between;
+    align-items: center;
+    /* flex-grow: 500; */
+  }
+  .headerOptions {
+    flex: 0 0 500px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding-right: 50px;
+  }
+  .headerOptions a {
+    color: #42d1d8;
+    font-family: 'Gugi', cursive;
+    font-weight: 300;
+    font-size: 20px;
+    text-decoration: none;
+  }
+  .headerOptions a:hover {
+    color: #2854b8;
+    /* font-size: 2px; */
+  }
+  .headerContainer h1 {
+    font-family: 'Gugi', cursive;
+    font-size: 45px;
+    font-weight: 300;
+    margin: 0;
+  }
+  .headerContainer h1 a {
+    text-decoration: none;
+    color: #2854b8;
+  }
+  .mainContainer {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+  .content {
+    margin-top: 50px;
+    display: flex;
+    width: 100%;
+    margin-left: 30px;
+  }
+  .widgetContainer {
+    margin-top: 48px;
+    display: flex;
+    width: 100%;
+  }
+  /* .widgetStyles {
+    display: flex;
+    width: 100%;
+  } */
+  .pubchem-widget {
+    display: flex;
+    width: 500px;
+    height: 600px;
+    bottom: 0px;
+  }
+  @media screen and (max-width: 800px) {
+  .mainContainer {
+    display: flex;
+    flex-direction: column;
+    /* width: 100%; */
+  }
+  .papers,
+  .papers:before,
+  .papers:after {
+    border: 0px;
+    box-shadow: none;
+    background-color: none;
+  }
+  .papers {
+    margin-left: 0px;
+    width: 100%;
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+  .papers:before,
+  .papers:after {
+   display:none;
+  }
+  .content {
+    margin-top: 60px;
+    margin-left: 0px;
+  }
+
+  .widgetContainer {
+    margin-top: 20px;
+    display: flex;
+    width: 100%;
+  }
+  .pubchem-widget {
+    display: flex;
+    width: 100%;
+    height: 650px;
+    bottom: 0px;
+  }
+  .widgetStyle{
+    width: 99%;
+  }
+  .headerOptions { display: none; }
+
+  .header{
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .papers h1{
+    padding-top: 0px;
+    margin-top: 0px;
+  }
+  .headerContainer {
+    justify-content: flex-start;
+  }
+  .blueLine{
+display:block;
+width:100%;
+height:2px;
+background-color: #42d1d8;
+}
+.greyLine{
+display:block;
+width:100%;
+height:1px;
+background-color: lightgray;
+}
+  .hamburgerMenu{
+    display:block;
+    font-size:30px;
+    margin-left: 20px;
+    margin-bottom: 7px;
+    margin-right: 5px;
+    text-decoration: none;
+    color: black;
+  }
+  #mySidenav {
+  
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  background-color: white;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  -webkit-box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.1); /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+    -moz-box-shadow: 0px 12px 25px rgba(189, 91, 91, 0.2); /* Firefox 3.5 - 3.6 */
+    box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.5); /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+    font-family: 'Gugi', cursive;
+}
+
+.sidenavHeader{
+margin-bottom: 15px;
+}
+
+.sidenavHeader Label{
+  display:block;
+  position: absolute;
+  top:0;
+  margin-top: 15px;
+  padding-bottom: 25px;
+  margin-left: 30px;
+  font-size: 29px;
+  color: #42d1d8;
+}
+#mySidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 22px;
+  color: #2854b8;
+  display: block;
+  transition: 0.3s;
+  font-family: 'Gugi', cursive;
+  background-color: white;
+}
+#mySidenav .closebtn {
+  display:block;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  font-weight: 100;
+  margin-left: 70px;
+  color: black;
+  cursor: none;
+  padding-bottom: 0px;
+  padding-bottom: 0px;
+  font-family: 'Noto Serif SC', serif;
+  font-size: 30px;
+  padding-top: 7px;padding-right: 6px;
+  -webkit-appearance: none;
+      background: transparent;
+      border: none;
+      background-color: transperant;
+      outline: none;
+}
+}
+@media screen and (min-width: 800px) {
+    .blueLine{
+display:none;
+}
+  }
+</style>
