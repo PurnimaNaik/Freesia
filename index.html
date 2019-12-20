@@ -217,7 +217,7 @@
               <img
                 src="./images/alphaTetralone.jpg"
                 alt="Norway"
-                class="image"
+                class="imageFlip"
               />
             </div>
             <div class="productTitle">
@@ -753,6 +753,13 @@
   .imageContainer {
     width: 100%;
     background-color: white;
+  }
+
+  .imageFlip{
+    width: 200px;
+    height: 200px;
+    -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
   }
 
   /* #@#@#@#@##@#@#@#@##@#@#@#@##@#@#@#@##@#@#@#@##@#@#@#@##@#@#@#@##@#@#@#@# */
