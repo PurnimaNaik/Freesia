@@ -1,7 +1,7 @@
 (function() {
-
-    function validateHuman(honeypot) {
-      if (honeypot) {  //if hidden form filled up
+//firstName==honeypot
+    function validateHuman(firstName) {
+      if (firstName) {  //if hidden form filled up
         console.log("Robot Detected!");
         return true;
       } else {
@@ -12,11 +12,11 @@
     // get all data in form and return object
     function getFormData(form) {
       var elements = form.elements;
-      var honeypot;
+      var firstName;
   
       var fields = Object.keys(elements).filter(function(k) {
-        if (elements[k].name === "honeypot") {
-          honeypot = elements[k].value;
+        if (elements[k].name === "firstName") {
+          firstName = elements[k].value;
           return false;
         }
         return true;
@@ -57,8 +57,8 @@
       formData.formGoogleSend
         = form.dataset.email || ""; // no email by default
   
-      console.log(formData);
-      return {data: formData, honeypot};
+      console.log("--->formData--->",formData);
+      return {data: formData, firstName};
     }
   
     function handleFormSubmit(event) {  // handles form submit without any jquery
@@ -67,8 +67,9 @@
       var formData = getFormData(form);
       var data = formData.data;
   
-      // If a honeypot field is filled, assume it was done so by a spam bot.
-      if (formData.honeypot) {
+      // If a firstName field is filled, assume it was done so by a spam bot.
+      if (formData.firstName) {
+        console.log("trapped--------!");
         return false;
       }
   

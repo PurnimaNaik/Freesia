@@ -7,7 +7,7 @@
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script
         async
-        src=""
+        src="https://www.googletagmanager.com/gtag/js?id=UA-147321955-1"
       ></script>
       <script>
         window.dataLayer = window.dataLayer || [];
@@ -92,9 +92,10 @@
             method="POST"
             id="enquiryForm"
             name="enquiryForm"
-            action=""
+
             data-email="freesia.chemicals37@gmail.com"
           >
+          <input id="firstName" type="text" name="firstName" value="" style="border: none"/>
             <h2 class="enquiry">Submit Enquiry</h2>
             <div class="formContent">
               <table>
@@ -121,31 +122,7 @@
                   </td>
                 </tr>
 
-                <tr>
-                  <td class="title"><label>Address :</label></td>
-                  <td class="desc">
-                    <input
-                      class="formInput"
-                      type="text"
-                      name="address"
-                      ng-model="address"
-                      id="address"
-                      ng-keyup="isFormValid()"
-                      required
-                      ng-pattern="/^[A-Za-z0-9., #-]+$/"
-                    />
-                    <span
-                      style="color:red;"
-                      ng-show="enquiryForm.address.$invalid"
-                    ></span>
-                    <p
-                      ng-show="enquiryForm.address.$error.pattern"
-                      class="error"
-                    >
-                      invalid address
-                    </p>
-                  </td>
-                </tr>
+
                 <tr>
                   <td class="title"><label>Email :</label></td>
                   <td class="desc">
@@ -194,6 +171,34 @@
                   </td>
                 </tr>
                 <tr>
+
+
+                    <tr>
+                        <td class="title"><label>Address :</label></td>
+                        <td class="desc">
+                          <input
+                            class="formInput"
+                            type="text"
+                            name="address"
+                            ng-model="address"
+                            id="address"
+                            ng-keyup="isFormValid()"
+                            required
+                            ng-pattern="/^[A-Za-z0-9., #-]+$/"
+                          />
+                          <span
+                            style="color:red;"
+                            ng-show="enquiryForm.address.$invalid"
+                          ></span>
+                          <p
+                            ng-show="enquiryForm.address.$error.pattern"
+                            class="error"
+                          >
+                            invalid address
+                          </p>
+                        </td>
+                      </tr>
+
                   <td class="title"><label>Description :</label></td>
                   <td class="desc">
                     <textarea
@@ -206,7 +211,7 @@
                       required
                       ng-keyup="isFormValid()"
                     ></textarea>
-                    <p class="maxlengthDisclaimer">500 characters max</p>
+                    <p class="maxlengthDisclaimer">minimum 20, maximum 50 characters</p>
                   </td>
                 </tr>
               </table>
@@ -248,7 +253,7 @@
     <script
       async
       defer
-      src="https://maps.googleapis.com/maps/api/js?"
+
     ></script>
 
     <script>
@@ -280,11 +285,12 @@ function closeNav() {
         console.log('scope.email:', $scope.email);
 
         $scope.clearFields = function() {
-          // console.log("clearFieldsas");
+          console.log("clearFieldsas");
           ($scope.name = ''),
             ($scope.address = ''),
             ($scope.email = ''),
             ($scope.contactNo = '');
+            ($('textarea#description').val()="");
         };
 
         $scope.isFormValid = function() {
@@ -293,7 +299,7 @@ function closeNav() {
             $scope.enquiryForm.address.$invalid == false &&
             $scope.enquiryForm.contactNo.$invalid == false &&
             $scope.enquiryForm.email.$invalid == false &&
-            $('textarea#description').val() != ''
+            $('textarea#description').val().trim().length>=20
           ) {
             $('#submitButton').prop('disabled', false);
             $('#submitButton').css('background-color', '#4caf50');
@@ -327,7 +333,7 @@ function closeNav() {
     <script
       data-cfasync="false"
       type="text/javascript"
-      src="../"
+      src="../form-submission-handler.js"
     ></script>
     <div class="blueLine"></div>
   </body>
@@ -343,6 +349,7 @@ function closeNav() {
     text-decoration-color: #42d1d8;
     font-size: 18px;
   }
+
 
   .content a {
     /* text-decoration: none; */
@@ -452,6 +459,7 @@ function closeNav() {
     -moz-transition: all 0.3s ease-in-out;
     -ms-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
+    font-family: Arial;
     outline: none;
     padding: 3px 0px 3px 3px;
     margin: 5px 1px 3px 0px;
@@ -462,6 +470,7 @@ function closeNav() {
 
   input[type='text']:focus,
   textarea:focus {
+    font-family: Arial;
     box-shadow: 0 0 5px #dddddd;
     padding: 3px 0px 3px 3px;
     margin: 5px 1px 3px 0px;
